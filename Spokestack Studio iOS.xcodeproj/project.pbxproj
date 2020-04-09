@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB12243F67A900FBFBCB /* AppDelegate.swift */; };
+		33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */; };
+		33A3FB17243F67A900FBFBCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB16243F67A900FBFBCB /* ContentView.swift */; };
+		33A3FB19243F67AB00FBFBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB18243F67AB00FBFBCB /* Assets.xcassets */; };
+		33A3FB1C243F67AB00FBFBCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB1B243F67AB00FBFBCB /* Preview Assets.xcassets */; };
+		33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */; };
+		33A3FB2A243F67AB00FBFBCB /* Spokestack_Studio_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB29243F67AB00FBFBCB /* Spokestack_Studio_iOSTests.swift */; };
+		33A3FB35243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB34243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33A3FB26243F67AB00FBFBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33A3FB07243F67A900FBFBCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33A3FB0E243F67A900FBFBCB;
+			remoteInfo = "Spokestack Studio iOS";
+		};
+		33A3FB31243F67AB00FBFBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33A3FB07243F67A900FBFBCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33A3FB0E243F67A900FBFBCB;
+			remoteInfo = "Spokestack Studio iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33A3FB0F243F67A900FBFBCB /* Spokestack Studio iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spokestack Studio iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A3FB12243F67A900FBFBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		33A3FB16243F67A900FBFBCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		33A3FB18243F67AB00FBFBCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33A3FB1B243F67AB00FBFBCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		33A3FB1E243F67AB00FBFBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		33A3FB20243F67AB00FBFBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33A3FB25243F67AB00FBFBCB /* Spokestack Studio iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spokestack Studio iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A3FB29243F67AB00FBFBCB /* Spokestack_Studio_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spokestack_Studio_iOSTests.swift; sourceTree = "<group>"; };
+		33A3FB2B243F67AB00FBFBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33A3FB30243F67AB00FBFBCB /* Spokestack Studio iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spokestack Studio iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A3FB34243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spokestack_Studio_iOSUITests.swift; sourceTree = "<group>"; };
+		33A3FB36243F67AB00FBFBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33A3FB0C243F67A900FBFBCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A3FB22243F67AB00FBFBCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A3FB2D243F67AB00FBFBCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33A3FB06243F67A900FBFBCB = {
+			isa = PBXGroup;
+			children = (
+				33A3FB11243F67A900FBFBCB /* Spokestack Studio iOS */,
+				33A3FB28243F67AB00FBFBCB /* Spokestack Studio iOSTests */,
+				33A3FB33243F67AB00FBFBCB /* Spokestack Studio iOSUITests */,
+				33A3FB10243F67A900FBFBCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33A3FB10243F67A900FBFBCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB0F243F67A900FBFBCB /* Spokestack Studio iOS.app */,
+				33A3FB25243F67AB00FBFBCB /* Spokestack Studio iOSTests.xctest */,
+				33A3FB30243F67AB00FBFBCB /* Spokestack Studio iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33A3FB11243F67A900FBFBCB /* Spokestack Studio iOS */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB12243F67A900FBFBCB /* AppDelegate.swift */,
+				33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */,
+				33A3FB16243F67A900FBFBCB /* ContentView.swift */,
+				33A3FB18243F67AB00FBFBCB /* Assets.xcassets */,
+				33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */,
+				33A3FB20243F67AB00FBFBCB /* Info.plist */,
+				33A3FB1A243F67AB00FBFBCB /* Preview Content */,
+			);
+			path = "Spokestack Studio iOS";
+			sourceTree = "<group>";
+		};
+		33A3FB1A243F67AB00FBFBCB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB1B243F67AB00FBFBCB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33A3FB28243F67AB00FBFBCB /* Spokestack Studio iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB29243F67AB00FBFBCB /* Spokestack_Studio_iOSTests.swift */,
+				33A3FB2B243F67AB00FBFBCB /* Info.plist */,
+			);
+			path = "Spokestack Studio iOSTests";
+			sourceTree = "<group>";
+		};
+		33A3FB33243F67AB00FBFBCB /* Spokestack Studio iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB34243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift */,
+				33A3FB36243F67AB00FBFBCB /* Info.plist */,
+			);
+			path = "Spokestack Studio iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33A3FB0E243F67A900FBFBCB /* Spokestack Studio iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A3FB39243F67AB00FBFBCB /* Build configuration list for PBXNativeTarget "Spokestack Studio iOS" */;
+			buildPhases = (
+				33A3FB0B243F67A900FBFBCB /* Sources */,
+				33A3FB0C243F67A900FBFBCB /* Frameworks */,
+				33A3FB0D243F67A900FBFBCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spokestack Studio iOS";
+			productName = "Spokestack Studio iOS";
+			productReference = 33A3FB0F243F67A900FBFBCB /* Spokestack Studio iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33A3FB24243F67AB00FBFBCB /* Spokestack Studio iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A3FB3C243F67AB00FBFBCB /* Build configuration list for PBXNativeTarget "Spokestack Studio iOSTests" */;
+			buildPhases = (
+				33A3FB21243F67AB00FBFBCB /* Sources */,
+				33A3FB22243F67AB00FBFBCB /* Frameworks */,
+				33A3FB23243F67AB00FBFBCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33A3FB27243F67AB00FBFBCB /* PBXTargetDependency */,
+			);
+			name = "Spokestack Studio iOSTests";
+			productName = "Spokestack Studio iOSTests";
+			productReference = 33A3FB25243F67AB00FBFBCB /* Spokestack Studio iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33A3FB2F243F67AB00FBFBCB /* Spokestack Studio iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A3FB3F243F67AB00FBFBCB /* Build configuration list for PBXNativeTarget "Spokestack Studio iOSUITests" */;
+			buildPhases = (
+				33A3FB2C243F67AB00FBFBCB /* Sources */,
+				33A3FB2D243F67AB00FBFBCB /* Frameworks */,
+				33A3FB2E243F67AB00FBFBCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33A3FB32243F67AB00FBFBCB /* PBXTargetDependency */,
+			);
+			name = "Spokestack Studio iOSUITests";
+			productName = "Spokestack Studio iOSUITests";
+			productReference = 33A3FB30243F67AB00FBFBCB /* Spokestack Studio iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33A3FB07243F67A900FBFBCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Spokestack;
+				TargetAttributes = {
+					33A3FB0E243F67A900FBFBCB = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					33A3FB24243F67AB00FBFBCB = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 33A3FB0E243F67A900FBFBCB;
+					};
+					33A3FB2F243F67AB00FBFBCB = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 33A3FB0E243F67A900FBFBCB;
+					};
+				};
+			};
+			buildConfigurationList = 33A3FB0A243F67A900FBFBCB /* Build configuration list for PBXProject "Spokestack Studio iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33A3FB06243F67A900FBFBCB;
+			productRefGroup = 33A3FB10243F67A900FBFBCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33A3FB0E243F67A900FBFBCB /* Spokestack Studio iOS */,
+				33A3FB24243F67AB00FBFBCB /* Spokestack Studio iOSTests */,
+				33A3FB2F243F67AB00FBFBCB /* Spokestack Studio iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33A3FB0D243F67A900FBFBCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */,
+				33A3FB1C243F67AB00FBFBCB /* Preview Assets.xcassets in Resources */,
+				33A3FB19243F67AB00FBFBCB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A3FB23243F67AB00FBFBCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A3FB2E243F67AB00FBFBCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33A3FB0B243F67A900FBFBCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */,
+				33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */,
+				33A3FB17243F67A900FBFBCB /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A3FB21243F67AB00FBFBCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A3FB2A243F67AB00FBFBCB /* Spokestack_Studio_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A3FB2C243F67AB00FBFBCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A3FB35243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33A3FB27243F67AB00FBFBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33A3FB0E243F67A900FBFBCB /* Spokestack Studio iOS */;
+			targetProxy = 33A3FB26243F67AB00FBFBCB /* PBXContainerItemProxy */;
+		};
+		33A3FB32243F67AB00FBFBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33A3FB0E243F67A900FBFBCB /* Spokestack Studio iOS */;
+			targetProxy = 33A3FB31243F67AB00FBFBCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33A3FB1E243F67AB00FBFBCB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33A3FB37243F67AB00FBFBCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		33A3FB38243F67AB00FBFBCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33A3FB3A243F67AB00FBFBCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = Q7AES4XQ29;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Spokestack Studio iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.spokestack.Spokestack-Studio-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33A3FB3B243F67AB00FBFBCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = Q7AES4XQ29;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Spokestack Studio iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.spokestack.Spokestack-Studio-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		33A3FB3D243F67AB00FBFBCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7AES4XQ29;
+				INFOPLIST_FILE = "Spokestack Studio iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.spokestack.Spokestack-Studio-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spokestack Studio iOS.app/Spokestack Studio iOS";
+			};
+			name = Debug;
+		};
+		33A3FB3E243F67AB00FBFBCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7AES4XQ29;
+				INFOPLIST_FILE = "Spokestack Studio iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.spokestack.Spokestack-Studio-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spokestack Studio iOS.app/Spokestack Studio iOS";
+			};
+			name = Release;
+		};
+		33A3FB40243F67AB00FBFBCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7AES4XQ29;
+				INFOPLIST_FILE = "Spokestack Studio iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.spokestack.Spokestack-Studio-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Spokestack Studio iOS";
+			};
+			name = Debug;
+		};
+		33A3FB41243F67AB00FBFBCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7AES4XQ29;
+				INFOPLIST_FILE = "Spokestack Studio iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.spokestack.Spokestack-Studio-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Spokestack Studio iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33A3FB0A243F67A900FBFBCB /* Build configuration list for PBXProject "Spokestack Studio iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A3FB37243F67AB00FBFBCB /* Debug */,
+				33A3FB38243F67AB00FBFBCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33A3FB39243F67AB00FBFBCB /* Build configuration list for PBXNativeTarget "Spokestack Studio iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A3FB3A243F67AB00FBFBCB /* Debug */,
+				33A3FB3B243F67AB00FBFBCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33A3FB3C243F67AB00FBFBCB /* Build configuration list for PBXNativeTarget "Spokestack Studio iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A3FB3D243F67AB00FBFBCB /* Debug */,
+				33A3FB3E243F67AB00FBFBCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33A3FB3F243F67AB00FBFBCB /* Build configuration list for PBXNativeTarget "Spokestack Studio iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A3FB40243F67AB00FBFBCB /* Debug */,
+				33A3FB41243F67AB00FBFBCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33A3FB07243F67A900FBFBCB /* Project object */;
+}
