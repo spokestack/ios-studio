@@ -15,6 +15,15 @@
 		33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */; };
 		33A3FB2A243F67AB00FBFBCB /* Spokestack_Studio_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB29243F67AB00FBFBCB /* Spokestack_Studio_iOSTests.swift */; };
 		33A3FB35243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB34243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift */; };
+		33A3FB43243F6ADD00FBFBCB /* DemoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB42243F6ADD00FBFBCB /* DemoList.swift */; };
+		33A3FB46243F6B2000FBFBCB /* DemoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB45243F6B2000FBFBCB /* DemoRow.swift */; };
+		33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB48243F6B9800FBFBCB /* Data.swift */; };
+		33A3FB4B243F6BEF00FBFBCB /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB4A243F6BEF00FBFBCB /* Demo.swift */; };
+		33A3FB4E243F6CC200FBFBCB /* demoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB4D243F6CC200FBFBCB /* demoData.json */; };
+		33A3FB51243F822100FBFBCB /* ASRDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */; };
+		33A3FB53243F838300FBFBCB /* MicButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB52243F838300FBFBCB /* MicButtonView.swift */; };
+		33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */; };
+		33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB56243FC49300FBFBCB /* WaveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		33A3FB30243F67AB00FBFBCB /* Spokestack Studio iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spokestack Studio iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A3FB34243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spokestack_Studio_iOSUITests.swift; sourceTree = "<group>"; };
 		33A3FB36243F67AB00FBFBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33A3FB42243F6ADD00FBFBCB /* DemoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoList.swift; sourceTree = "<group>"; };
+		33A3FB45243F6B2000FBFBCB /* DemoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoRow.swift; sourceTree = "<group>"; };
+		33A3FB48243F6B9800FBFBCB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		33A3FB4A243F6BEF00FBFBCB /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
+		33A3FB4D243F6CC200FBFBCB /* demoData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demoData.json; sourceTree = "<group>"; };
+		33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASRDemoDetail.swift; sourceTree = "<group>"; };
+		33A3FB52243F838300FBFBCB /* MicButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicButtonView.swift; sourceTree = "<group>"; };
+		33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicButtonListeningView.swift; sourceTree = "<group>"; };
+		33A3FB56243FC49300FBFBCB /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,10 @@
 		33A3FB11243F67A900FBFBCB /* Spokestack Studio iOS */ = {
 			isa = PBXGroup;
 			children = (
+				33A3FB4F243F81BC00FBFBCB /* ASR */,
+				33A3FB4C243F6C9400FBFBCB /* Resources */,
+				33A3FB47243F6B7A00FBFBCB /* Models */,
+				33A3FB44243F6AE700FBFBCB /* Home */,
 				33A3FB12243F67A900FBFBCB /* AppDelegate.swift */,
 				33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */,
 				33A3FB16243F67A900FBFBCB /* ContentView.swift */,
@@ -106,6 +128,9 @@
 				33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */,
 				33A3FB20243F67AB00FBFBCB /* Info.plist */,
 				33A3FB1A243F67AB00FBFBCB /* Preview Content */,
+				33A3FB52243F838300FBFBCB /* MicButtonView.swift */,
+				33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */,
+				33A3FB56243FC49300FBFBCB /* WaveView.swift */,
 			);
 			path = "Spokestack Studio iOS";
 			sourceTree = "<group>";
@@ -134,6 +159,40 @@
 				33A3FB36243F67AB00FBFBCB /* Info.plist */,
 			);
 			path = "Spokestack Studio iOSUITests";
+			sourceTree = "<group>";
+		};
+		33A3FB44243F6AE700FBFBCB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB42243F6ADD00FBFBCB /* DemoList.swift */,
+				33A3FB45243F6B2000FBFBCB /* DemoRow.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		33A3FB47243F6B7A00FBFBCB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB48243F6B9800FBFBCB /* Data.swift */,
+				33A3FB4A243F6BEF00FBFBCB /* Demo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		33A3FB4C243F6C9400FBFBCB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB4D243F6CC200FBFBCB /* demoData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		33A3FB4F243F81BC00FBFBCB /* ASR */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */,
+			);
+			path = ASR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A3FB4E243F6CC200FBFBCB /* demoData.json in Resources */,
 				33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */,
 				33A3FB1C243F67AB00FBFBCB /* Preview Assets.xcassets in Resources */,
 				33A3FB19243F67AB00FBFBCB /* Assets.xcassets in Resources */,
@@ -267,8 +327,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */,
 				33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */,
+				33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */,
+				33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */,
 				33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */,
+				33A3FB53243F838300FBFBCB /* MicButtonView.swift in Sources */,
+				33A3FB43243F6ADD00FBFBCB /* DemoList.swift in Sources */,
+				33A3FB51243F822100FBFBCB /* ASRDemoDetail.swift in Sources */,
+				33A3FB4B243F6BEF00FBFBCB /* Demo.swift in Sources */,
+				33A3FB46243F6B2000FBFBCB /* DemoRow.swift in Sources */,
 				33A3FB17243F67A900FBFBCB /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

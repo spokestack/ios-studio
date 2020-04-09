@@ -1,0 +1,23 @@
+
+[
+{
+    "name": "Live Speech Recognition",
+    "description": "Push to talk and let the app convert what you say to text.",
+    "id": 1001,
+},
+{
+    "name": "Voice Transfer",
+    "description": "Speak to the app and hear your words repeated in a different voice.",
+    "id": 1002,
+},
+{
+    "name": "Intent Understanding",
+    "description": "Load a natural language understanding model to process what you say.",
+    "id": 1003,
+},
+{
+    "name": "Wake Word",
+    "description": "Speak a custom word to wake up your app.",
+    "id": 1004,
+}
+]
