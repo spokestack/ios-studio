@@ -16,17 +16,26 @@ struct ASRDemoDetail: View {
     @ObservedObject var store:ASRDemoStore
     
      var body: some View {
-        VStack {
-            Spacer()
-            Text(store.text).padding()
-            Spacer()
-            MicButtonView(store:store)
-                .offset(x: 0, y: 60)
-           
-            recordingView()
-                .transition(
-                    AnyTransition.opacity.animation(Animation.linear(duration: 1))
-            )
+        ZStack {
+            Color("SpokestackBackground").edgesIgnoringSafeArea(.all)
+            VStack {
+                
+                Spacer()
+                Text(store.text).foregroundColor(Color("SpokestackPrimary")).padding()
+                Spacer()
+                VStack {
+                    hintView().transition(
+                        AnyTransition.opacity.animation(Animation.linear(duration: 1))
+                    )
+                    
+                    MicButtonView(store:store)
+                }.offset(x: 0, y: 60)
+               
+                recordingView()
+                    .transition(
+                        AnyTransition.opacity.animation(Animation.linear(duration: 1))
+                )
+            }
         }
     }
     
@@ -36,6 +45,15 @@ struct ASRDemoDetail: View {
                 WaveView().frame(height: 100.0)
             } else {
                 Spacer().frame(height: 108.0)
+            }
+        }
+    }
+    
+    func hintView() -> some View {
+        Group {
+            if (!store.isPipelineActive) {
+                Text("Tap the button below & speak")
+                Image("DownArrow")
             }
         }
     }

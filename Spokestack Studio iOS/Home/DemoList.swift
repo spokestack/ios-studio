@@ -13,7 +13,7 @@ struct DemoList: View {
     
     var body: some View {
         
-        let store = ASRDemoStore(isRecording: false, text: "")
+        let store = ASRDemoStore(text: "")
         
         return NavigationView {
             List(demoData) { demo in
@@ -21,7 +21,11 @@ struct DemoList: View {
                     DemoRow(demo: demo)
                 }
             }
-            .navigationBarTitle(Text("Spokestack"))
+            //.background(Color("SpokestackPrimary").edgesIgnoringSafeArea(.all))
+            .navigationBarTitle(Text("Studio Demos"))
+            .navigationBarItems(leading:
+                Image("HeaderLogo")
+            )
         }
     }
 }

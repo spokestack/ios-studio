@@ -16,8 +16,11 @@ struct MicButtonView: View {
     var body: some View {
         VStack {
             Button(action: {
-                //self.isRecording.toggle()
-                self.store.activate()
+                if (self.store.isPipelineActive) {
+                    self.store.deactivate()
+                } else {
+                    self.store.activate()
+                }
             }) {
                 HStack {
                     if (store.isPipelineActive) {
