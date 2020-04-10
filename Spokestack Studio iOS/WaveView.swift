@@ -44,35 +44,31 @@ struct SineWave: Shape {
     let frequency: CGFloat //cycles per screen width
     
     func path(in rect: CGRect) -> Path {
-            let width = rect.width
-            let height = rect.height
+        let width = rect.width
+        let height = rect.height
 
-            let origin = CGPoint(x: 0, y: height * 0.50)
+        let origin = CGPoint(x: 0, y: height * 0.50)
 
-            var path = Path()
-            path.move(to: origin)
+        var path = Path()
+        path.move(to: origin)
 
-            var endY: CGFloat = 0.0
-            let step = 5.0
-            let omega = Double(frequency / width) * 2.0 * Double.pi
-            print("width: \(width)")
-            for angle in stride(from: 0, to: Double(width), by: step) {
-                
-                
-                let x = origin.x + CGFloat(angle)
-                let y = origin.y - CGFloat(sin(omega * angle + Double(phase))) * amplitude
-                
-                print("angle: \(angle) x: \(x) y: \(y)")
-                
-                path.addLine(to: CGPoint(x: x, y: y))
-                endY = y
-            }
-            path.addLine(to: CGPoint(x: width, y: endY))
-            path.addLine(to: CGPoint(x: width, y: height))
-            path.addLine(to: CGPoint(x: 0, y: height))
-            path.addLine(to: CGPoint(x: 0, y: origin.y))
+        var endY: CGFloat = 0.0
+        let step = 5.0
+        let omega = Double(frequency / width) * 2.0 * Double.pi
+        for angle in stride(from: 0, to: Double(width), by: step) {
+            
+            let x = origin.x + CGFloat(angle)
+            let y = origin.y - CGFloat(sin(omega * angle + Double(phase))) * amplitude
+            
+            path.addLine(to: CGPoint(x: x, y: y))
+            endY = y
+        }
+        path.addLine(to: CGPoint(x: width, y: endY))
+        path.addLine(to: CGPoint(x: width, y: height))
+        path.addLine(to: CGPoint(x: 0, y: height))
+        path.addLine(to: CGPoint(x: 0, y: origin.y))
 
-            return path
+        return path
     }
 }
 

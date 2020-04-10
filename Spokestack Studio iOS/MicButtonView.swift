@@ -10,21 +10,23 @@ import SwiftUI
 
 struct MicButtonView: View {
     
-    @Binding var isRecording: Bool
+    //@Binding var isRecording: Bool
+    @ObservedObject var store:ASRDemoStore
     
     var body: some View {
         VStack {
             Button(action: {
-                self.isRecording.toggle()
+                //self.isRecording.toggle()
+                self.store.activate()
             }) {
                 HStack {
-                    if (self.isRecording) {
+                    if (store.isPipelineActive) {
                         MicButtonListeningView(compression: 3).frame(width: 58, height: 58)
                     } else {
                         Image(systemName: "mic").font(.title)
                     }
                 }
-                .padding(self.isRecording ? 10 : 30.0)
+                .padding(store.isPipelineActive ? 10 : 30.0)
                 .foregroundColor(.white)
                 .background(Color("SpokestackPrimary"))
                 .cornerRadius(40)
@@ -45,7 +47,7 @@ struct MicButtonView_Previews: PreviewProvider {
       @State var isRecording: Bool = false
 
       var body: some View {
-        MicButtonView(isRecording: $isRecording)
+        MicButtonView(store: ASRDemoStore(text: ""))
       }
     }
 }

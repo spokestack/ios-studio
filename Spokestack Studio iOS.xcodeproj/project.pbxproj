@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334AA4852440DB96007CB814 /* ASRDemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334AA4842440DB96007CB814 /* ASRDemoStore.swift */; };
 		33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB12243F67A900FBFBCB /* AppDelegate.swift */; };
 		33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */; };
 		33A3FB17243F67A900FBFBCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB16243F67A900FBFBCB /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 		33A3FB53243F838300FBFBCB /* MicButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB52243F838300FBFBCB /* MicButtonView.swift */; };
 		33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */; };
 		33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB56243FC49300FBFBCB /* WaveView.swift */; };
+		7BD642C6A595E7A6101B90CB /* Pods_Spokestack_Studio_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FB2D58825BF78AC8D26AD3 /* Pods_Spokestack_Studio_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B4E6F80FD9BA61D40C7D88F /* Pods-Spokestack Studio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spokestack Studio iOS.release.xcconfig"; path = "Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS.release.xcconfig"; sourceTree = "<group>"; };
+		334AA4842440DB96007CB814 /* ASRDemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASRDemoStore.swift; sourceTree = "<group>"; };
 		33A3FB0F243F67A900FBFBCB /* Spokestack Studio iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spokestack Studio iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A3FB12243F67A900FBFBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 		33A3FB52243F838300FBFBCB /* MicButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicButtonView.swift; sourceTree = "<group>"; };
 		33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicButtonListeningView.swift; sourceTree = "<group>"; };
 		33A3FB56243FC49300FBFBCB /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		42FB2D58825BF78AC8D26AD3 /* Pods_Spokestack_Studio_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spokestack_Studio_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF5495AD9D31EF7AB0845F6B /* Pods-Spokestack Studio iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spokestack Studio iOS.debug.xcconfig"; path = "Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD642C6A595E7A6101B90CB /* Pods_Spokestack_Studio_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +108,8 @@
 				33A3FB28243F67AB00FBFBCB /* Spokestack Studio iOSTests */,
 				33A3FB33243F67AB00FBFBCB /* Spokestack Studio iOSUITests */,
 				33A3FB10243F67A900FBFBCB /* Products */,
+				C667BDC6F5E34CA122E421F2 /* Pods */,
+				3975D6F20DAFB98059DC3750 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,8 +200,26 @@
 			isa = PBXGroup;
 			children = (
 				33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */,
+				334AA4842440DB96007CB814 /* ASRDemoStore.swift */,
 			);
 			path = ASR;
+			sourceTree = "<group>";
+		};
+		3975D6F20DAFB98059DC3750 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42FB2D58825BF78AC8D26AD3 /* Pods_Spokestack_Studio_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C667BDC6F5E34CA122E421F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF5495AD9D31EF7AB0845F6B /* Pods-Spokestack Studio iOS.debug.xcconfig */,
+				1B4E6F80FD9BA61D40C7D88F /* Pods-Spokestack Studio iOS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33A3FB39243F67AB00FBFBCB /* Build configuration list for PBXNativeTarget "Spokestack Studio iOS" */;
 			buildPhases = (
+				F13A391ED4CF111F3D00B7A0 /* [CP] Check Pods Manifest.lock */,
 				33A3FB0B243F67A900FBFBCB /* Sources */,
 				33A3FB0C243F67A900FBFBCB /* Frameworks */,
 				33A3FB0D243F67A900FBFBCB /* Resources */,
@@ -322,11 +350,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F13A391ED4CF111F3D00B7A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spokestack Studio iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33A3FB0B243F67A900FBFBCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				334AA4852440DB96007CB814 /* ASRDemoStore.swift in Sources */,
 				33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */,
 				33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */,
 				33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */,
@@ -500,6 +554,7 @@
 		};
 		33A3FB3A243F67AB00FBFBCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF5495AD9D31EF7AB0845F6B /* Pods-Spokestack Studio iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -520,6 +575,7 @@
 		};
 		33A3FB3B243F67AB00FBFBCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4E6F80FD9BA61D40C7D88F /* Pods-Spokestack Studio iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

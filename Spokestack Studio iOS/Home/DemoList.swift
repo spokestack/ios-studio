@@ -9,10 +9,15 @@
 import SwiftUI
 
 struct DemoList: View {
+    
+    
     var body: some View {
-        NavigationView {
+        
+        let store = ASRDemoStore(isRecording: false, text: "")
+        
+        return NavigationView {
             List(demoData) { demo in
-                NavigationLink(destination: ASRDemoDetail()) {
+                NavigationLink(destination: ASRDemoDetail(store:store)) {
                     DemoRow(demo: demo)
                 }
             }

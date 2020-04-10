@@ -33,25 +33,25 @@ struct MicButtonListeningView: View {
             circle2
             circle3
             }.onReceive(timer) { time in
-            if self.state == 2 {
-                
-                self.scale1 = MicButtonListeningView.minScale
-                self.scale2 = 1
-                
-                self.state = 0
-            } else if self.state == 1 {
-                
-                self.scale0 = MicButtonListeningView.minScale
-                self.scale1 = 1
-                
-                self.state = 2
-            } else {
-                
-                self.scale2 = MicButtonListeningView.minScale
-                self.scale0 = 1
-                
-                self.state = 1
-            }
+                if self.state == 2 {
+                    
+                    self.scale1 = MicButtonListeningView.minScale
+                    self.scale2 = 1
+                    
+                    self.state = 0
+                } else if self.state == 1 {
+                    
+                    self.scale0 = MicButtonListeningView.minScale
+                    self.scale1 = 1
+                    
+                    self.state = 2
+                } else {
+                    
+                    self.scale2 = MicButtonListeningView.minScale
+                    self.scale0 = 1
+                    
+                    self.state = 1
+                }
         }
         
    }

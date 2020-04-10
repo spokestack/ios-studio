@@ -7,15 +7,21 @@
 //
 
 import SwiftUI
+import Spokestack
 
 struct ASRDemoDetail: View {
     
-    @State private var isRecording:Bool = false
+    //@State private var isRecording:Bool = false
     
-    var body: some View {
+    @ObservedObject var store:ASRDemoStore
+    
+     var body: some View {
         VStack {
             Spacer()
-            MicButtonView(isRecording: $isRecording).offset(x: 0, y: 60)
+            Text(store.text).padding()
+            Spacer()
+            MicButtonView(store:store)
+                .offset(x: 0, y: 60)
            
             recordingView()
                 .transition(
@@ -26,7 +32,7 @@ struct ASRDemoDetail: View {
     
     func recordingView() -> some View {
         Group {
-            if (isRecording) {
+            if (store.isPipelineActive) {
                 WaveView().frame(height: 100.0)
             } else {
                 Spacer().frame(height: 108.0)
@@ -37,6 +43,7 @@ struct ASRDemoDetail: View {
 
 struct ASRDemoDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ASRDemoDetail()
+        ASRDemoDetail(store:ASRDemoStore(text: ""))
     }
 }
+

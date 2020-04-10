@@ -56,5 +56,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The microphone is used to receive user commands via voice.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Speech recognition is used to translate user voice input into text for further processing.</string>
 </dict>
 </plist>
