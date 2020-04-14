@@ -11,7 +11,7 @@ import SwiftUI
 struct MicButtonView: View {
     
     //@Binding var isRecording: Bool
-    @ObservedObject var store:ASRDemoStore
+    @ObservedObject var store:PipelineStore
     
     var body: some View {
         VStack {
@@ -50,7 +50,7 @@ struct MicButtonView_Previews: PreviewProvider {
       @State var isRecording: Bool = false
 
       var body: some View {
-        MicButtonView(store: ASRDemoStore(text: ""))
+        MicButtonView(store: PipelineStore(text: ""))
       }
     }
 }

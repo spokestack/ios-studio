@@ -10,23 +10,43 @@ import SwiftUI
 
 struct DemoList: View {
     
-    
     var body: some View {
+   
+        let asrStore = PipelineStore(text: "")
+        let ttsStore = SpeechStore()
         
-        let store = ASRDemoStore(text: "")
+        let demos = [
+            DemoView(demo: demoData[0], destination: AnyView(ASRDemoDetail(store: asrStore))),
+            DemoView(demo: demoData[1], destination: AnyView(TTSDemoDetail(asrStore: asrStore, ttsStore: ttsStore)))
+        ]
         
         return NavigationView {
-            List(demoData) { demo in
-                NavigationLink(destination: ASRDemoDetail(store:store)) {
-                    DemoRow(demo: demo)
+            
+            List(demos) { demo in
+                NavigationLink(destination: demo.destination) {
+                    DemoRow(demo: demo.demo)
                 }
             }
+            
             //.background(Color("SpokestackPrimary").edgesIgnoringSafeArea(.all))
             .navigationBarTitle(Text("Studio Demos"))
             .navigationBarItems(leading:
                 Image("HeaderLogo")
             )
         }
+    }
+}
+
+struct DemoView: Identifiable {
+
+    let id: Int
+    let demo: Demo
+    let destination: AnyView
+
+    init(demo: Demo, destination: AnyView) {
+        self.id = demo.id
+        self.demo = demo
+        self.destination = destination
     }
 }
 

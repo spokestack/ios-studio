@@ -6,8 +6,6 @@
 //  Copyright © 2020 Spokestack. All rights reserved.
 //
 
-import Foundation
-
 struct Demo: Hashable, Codable, Identifiable {
     var id: Int
     var name: String

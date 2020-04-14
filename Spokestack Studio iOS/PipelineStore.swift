@@ -1,15 +1,15 @@
 //
-//  ASRSpokestackController.swift
+//  PipelineStore.swift
 //  Spokestack Studio iOS
 //
-//  Created by Daniel Tyreus on 4/10/20.
+//  Created by Daniel Tyreus on 4/13/20.
 //  Copyright © 2020 Spokestack. All rights reserved.
 //
 
 import SwiftUI
 import Spokestack
 
-final class ASRDemoStore: ObservableObject {
+class PipelineStore: ObservableObject {
     
     @Published var isPipelineActive: Bool
     @Published var text: String
@@ -25,13 +25,9 @@ final class ASRDemoStore: ObservableObject {
         return SpeechPipeline(self, pipelineDelegate: self)
     }()
     
-    deinit {
-        pipeline.speechDelegate = nil
-    }
-    
 }
 
-extension ASRDemoStore: SpeechEventListener {
+extension PipelineStore: SpeechEventListener {
     func activate() {
         print("activated pipeline")
         self.pipeline.activate()
@@ -67,7 +63,7 @@ extension ASRDemoStore: SpeechEventListener {
 
 }
 
-extension ASRDemoStore: PipelineDelegate {
+extension PipelineStore: PipelineDelegate {
     func didInit() {
         print("didInit")
     }

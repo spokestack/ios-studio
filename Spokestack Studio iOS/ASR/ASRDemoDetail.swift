@@ -13,7 +13,7 @@ struct ASRDemoDetail: View {
     
     //@State private var isRecording:Bool = false
     
-    @ObservedObject var store:ASRDemoStore
+    @ObservedObject var store:PipelineStore
     
      var body: some View {
         ZStack {
@@ -61,7 +61,7 @@ struct ASRDemoDetail: View {
 
 struct ASRDemoDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ASRDemoDetail(store:ASRDemoStore(text: ""))
+        ASRDemoDetail(store:PipelineStore(text: ""))
     }
 }
 

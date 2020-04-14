@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		334AA4852440DB96007CB814 /* ASRDemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334AA4842440DB96007CB814 /* ASRDemoStore.swift */; };
 		33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB12243F67A900FBFBCB /* AppDelegate.swift */; };
 		33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */; };
-		33A3FB17243F67A900FBFBCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB16243F67A900FBFBCB /* ContentView.swift */; };
 		33A3FB19243F67AB00FBFBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB18243F67AB00FBFBCB /* Assets.xcassets */; };
 		33A3FB1C243F67AB00FBFBCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB1B243F67AB00FBFBCB /* Preview Assets.xcassets */; };
 		33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */; };
@@ -25,6 +23,9 @@
 		33A3FB53243F838300FBFBCB /* MicButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB52243F838300FBFBCB /* MicButtonView.swift */; };
 		33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */; };
 		33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB56243FC49300FBFBCB /* WaveView.swift */; };
+		33AACCCC2444CB1700DF3700 /* TTSDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AACCCB2444CB1700DF3700 /* TTSDemoDetail.swift */; };
+		33AACCCE2444CC1A00DF3700 /* PipelineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */; };
+		33AACCD02444EFD700DF3700 /* SpeechStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AACCCF2444EFD700DF3700 /* SpeechStore.swift */; };
 		7BD642C6A595E7A6101B90CB /* Pods_Spokestack_Studio_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FB2D58825BF78AC8D26AD3 /* Pods_Spokestack_Studio_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +48,9 @@
 
 /* Begin PBXFileReference section */
 		1B4E6F80FD9BA61D40C7D88F /* Pods-Spokestack Studio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spokestack Studio iOS.release.xcconfig"; path = "Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS.release.xcconfig"; sourceTree = "<group>"; };
-		334AA4842440DB96007CB814 /* ASRDemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASRDemoStore.swift; sourceTree = "<group>"; };
 		33A3FB0F243F67A900FBFBCB /* Spokestack Studio iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spokestack Studio iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A3FB12243F67A900FBFBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		33A3FB16243F67A900FBFBCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		33A3FB18243F67AB00FBFBCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33A3FB1B243F67AB00FBFBCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33A3FB1E243F67AB00FBFBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +70,9 @@
 		33A3FB52243F838300FBFBCB /* MicButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicButtonView.swift; sourceTree = "<group>"; };
 		33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicButtonListeningView.swift; sourceTree = "<group>"; };
 		33A3FB56243FC49300FBFBCB /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		33AACCCB2444CB1700DF3700 /* TTSDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSDemoDetail.swift; sourceTree = "<group>"; };
+		33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineStore.swift; sourceTree = "<group>"; };
+		33AACCCF2444EFD700DF3700 /* SpeechStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechStore.swift; sourceTree = "<group>"; };
 		42FB2D58825BF78AC8D26AD3 /* Pods_Spokestack_Studio_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spokestack_Studio_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5495AD9D31EF7AB0845F6B /* Pods-Spokestack Studio iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spokestack Studio iOS.debug.xcconfig"; path = "Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,13 +128,13 @@
 		33A3FB11243F67A900FBFBCB /* Spokestack Studio iOS */ = {
 			isa = PBXGroup;
 			children = (
+				33A3FB44243F6AE700FBFBCB /* Home */,
 				33A3FB4F243F81BC00FBFBCB /* ASR */,
+				33AACCC82444BB3D00DF3700 /* TTS */,
 				33A3FB4C243F6C9400FBFBCB /* Resources */,
 				33A3FB47243F6B7A00FBFBCB /* Models */,
-				33A3FB44243F6AE700FBFBCB /* Home */,
 				33A3FB12243F67A900FBFBCB /* AppDelegate.swift */,
 				33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */,
-				33A3FB16243F67A900FBFBCB /* ContentView.swift */,
 				33A3FB18243F67AB00FBFBCB /* Assets.xcassets */,
 				33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */,
 				33A3FB20243F67AB00FBFBCB /* Info.plist */,
@@ -140,6 +142,8 @@
 				33A3FB52243F838300FBFBCB /* MicButtonView.swift */,
 				33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */,
 				33A3FB56243FC49300FBFBCB /* WaveView.swift */,
+				33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */,
+				33AACCCF2444EFD700DF3700 /* SpeechStore.swift */,
 			);
 			path = "Spokestack Studio iOS";
 			sourceTree = "<group>";
@@ -200,9 +204,16 @@
 			isa = PBXGroup;
 			children = (
 				33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */,
-				334AA4842440DB96007CB814 /* ASRDemoStore.swift */,
 			);
 			path = ASR;
+			sourceTree = "<group>";
+		};
+		33AACCC82444BB3D00DF3700 /* TTS */ = {
+			isa = PBXGroup;
+			children = (
+				33AACCCB2444CB1700DF3700 /* TTSDemoDetail.swift */,
+			);
+			path = TTS;
 			sourceTree = "<group>";
 		};
 		3975D6F20DAFB98059DC3750 /* Frameworks */ = {
@@ -380,18 +391,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				334AA4852440DB96007CB814 /* ASRDemoStore.swift in Sources */,
 				33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */,
 				33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */,
 				33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */,
 				33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */,
 				33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */,
+				33AACCCC2444CB1700DF3700 /* TTSDemoDetail.swift in Sources */,
 				33A3FB53243F838300FBFBCB /* MicButtonView.swift in Sources */,
 				33A3FB43243F6ADD00FBFBCB /* DemoList.swift in Sources */,
 				33A3FB51243F822100FBFBCB /* ASRDemoDetail.swift in Sources */,
+				33AACCCE2444CC1A00DF3700 /* PipelineStore.swift in Sources */,
+				33AACCD02444EFD700DF3700 /* SpeechStore.swift in Sources */,
 				33A3FB4B243F6BEF00FBFBCB /* Demo.swift in Sources */,
 				33A3FB46243F6B2000FBFBCB /* DemoRow.swift in Sources */,
-				33A3FB17243F67A900FBFBCB /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +574,7 @@
 				DEVELOPMENT_TEAM = Q7AES4XQ29;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Spokestack Studio iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +596,7 @@
 				DEVELOPMENT_TEAM = Q7AES4XQ29;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Spokestack Studio iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
