@@ -42,27 +42,31 @@ struct NLUDemoDetail: View {
                 )
                 Spacer()
             } else if (uiState == .listening || uiState == .ready) {
-               Group {
-                   if (uiState == .ready) {
-                       Group {
-                           Text("Tap the button below & speak")
-                           Image("DownArrow")
-                       }.transition(.opacity)
-                   }
-                   
-                       MicButtonView(store:asrStore).transition(.opacity)
-               }.offset(x: 0, y: 60)
-               
-               if (uiState == .listening) {
-                   WaveView().frame(height: 100.0).transition(.opacity)
-               } else if (uiState == .ready) {
-                   Spacer().frame(height: 108.0).transition(.opacity)
-               }
+                VStack {
+                    Spacer()
+                    
+                    Group {
+                        if (uiState == .ready) {
+                            Group {
+                                Text("Tap the button below & speak")
+                                Image("DownArrow")
+                            }.transition(.opacity)
+                        }
+                        
+                        MicButtonView(store:asrStore).transition(.opacity)
+                    }.offset(x: 0, y: 60)
+                    
+                    if (uiState == .listening) {
+                        WaveView().frame(height: 100.0).transition(.opacity)
+                    } else if (uiState == .ready) {
+                        Spacer().frame(height: 108.0).transition(.opacity)
+                    }
+                }
             } else {
                 VStack {
                     Text("\"\(asrStore.text)\"").font(.title)
                         .foregroundColor(Color("SpokestackPrimary")).padding()
-                    classifyingView()
+                    ClassifyingView(store:nluStore)
                     Spacer()
                     Button("Reset", action:{
                         withAnimation() {
@@ -72,14 +76,14 @@ struct NLUDemoDetail: View {
                 }.transition(.opacity)
             }
         }.navigationBarTitle("NLU")
-        .onReceive(asrStore.$text) { text in
-            print("received text \(text)")
-            if ((text.count > 0 && self.uiState == .listening)){
-                self.nluStore.classify(text: text)
-                withAnimation() {
-                    self.uiState = .classifying
+            .onReceive(asrStore.$text) { text in
+                print("received text \(text)")
+                if ((text.count > 0 && self.uiState == .listening)){
+                    self.nluStore.classify(text: text)
+                    withAnimation() {
+                        self.uiState = .classifying
+                    }
                 }
-            }
         }.onReceive(asrStore.$isPipelineActive, perform: { isPipelineActive in
             print("onreceive pipeline \(isPipelineActive) \(self.uiState)")
             if (isPipelineActive) {
@@ -87,17 +91,6 @@ struct NLUDemoDetail: View {
             }
             
         })
-    }
-    
-    func listeningView() -> some View {
-        VStack {
-            Spacer()
-            ListeningView(store:asrStore)
-        }
-    }
-    
-    func classifyingView() -> some View {
-        ClassifyingView(store:nluStore)
     }
     
     
