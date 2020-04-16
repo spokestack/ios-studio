@@ -38,7 +38,9 @@ extension PipelineStore: SpeechEventListener {
     func deactivate() {
         print("deactivated pipeline")
         self.pipeline.deactivate()
-        isPipelineActive = false
+        DispatchQueue.main.async {
+            self.isPipelineActive = false
+        }
     }
     
     
@@ -53,7 +55,10 @@ extension PipelineStore: SpeechEventListener {
     func didRecognize(_ result: SpeechContext) {
         
         print("didRecognize \(result.isSpeech) and transscript \(result.transcript)")
-        text = result.transcript
+        DispatchQueue.main.async {
+            self.text = result.transcript
+    
+        }
     }
 
     func didTimeout() {

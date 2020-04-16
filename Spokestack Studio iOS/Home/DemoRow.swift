@@ -25,10 +25,10 @@ struct DemoRow: View {
 
 struct DemoRow_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
+        List {
             DemoRow(demo: demoData[0])
             DemoRow(demo: demoData[1])
         }
-        .previewLayout(.fixed(width: 300, height: 70))
+        .previewLayout(.fixed(width: 300, height: 400))
     }
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3332887624461933006C3BDE /* NLUStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887524461933006C3BDE /* NLUStore.swift */; };
+		3332887924462EAE006C3BDE /* NLUDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887824462EAE006C3BDE /* NLUDemoDetail.swift */; };
+		3332887D24465ADC006C3BDE /* camera.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3332887A24465ADC006C3BDE /* camera.tflite */; };
+		3332887E24465ADC006C3BDE /* camera.json in Resources */ = {isa = PBXBuildFile; fileRef = 3332887B24465ADC006C3BDE /* camera.json */; };
+		3332887F24465ADC006C3BDE /* vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3332887C24465ADC006C3BDE /* vocab.txt */; };
+		3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398470224478D9C000C4242 /* ClassifyingView.swift */; };
 		33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB12243F67A900FBFBCB /* AppDelegate.swift */; };
 		33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */; };
 		33A3FB19243F67AB00FBFBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB18243F67AB00FBFBCB /* Assets.xcassets */; };
@@ -48,6 +54,12 @@
 
 /* Begin PBXFileReference section */
 		1B4E6F80FD9BA61D40C7D88F /* Pods-Spokestack Studio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spokestack Studio iOS.release.xcconfig"; path = "Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS.release.xcconfig"; sourceTree = "<group>"; };
+		3332887524461933006C3BDE /* NLUStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUStore.swift; sourceTree = "<group>"; };
+		3332887824462EAE006C3BDE /* NLUDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUDemoDetail.swift; sourceTree = "<group>"; };
+		3332887A24465ADC006C3BDE /* camera.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera.tflite; sourceTree = "<group>"; };
+		3332887B24465ADC006C3BDE /* camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camera.json; sourceTree = "<group>"; };
+		3332887C24465ADC006C3BDE /* vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vocab.txt; sourceTree = "<group>"; };
+		3398470224478D9C000C4242 /* ClassifyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyingView.swift; sourceTree = "<group>"; };
 		33A3FB0F243F67A900FBFBCB /* Spokestack Studio iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spokestack Studio iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A3FB12243F67A900FBFBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3332887724462CB0006C3BDE /* NLU */ = {
+			isa = PBXGroup;
+			children = (
+				3332887824462EAE006C3BDE /* NLUDemoDetail.swift */,
+				3398470224478D9C000C4242 /* ClassifyingView.swift */,
+			);
+			path = NLU;
+			sourceTree = "<group>";
+		};
 		33A3FB06243F67A900FBFBCB = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +152,7 @@
 				33A3FB44243F6AE700FBFBCB /* Home */,
 				33A3FB4F243F81BC00FBFBCB /* ASR */,
 				33AACCC82444BB3D00DF3700 /* TTS */,
+				3332887724462CB0006C3BDE /* NLU */,
 				33A3FB4C243F6C9400FBFBCB /* Resources */,
 				33A3FB47243F6B7A00FBFBCB /* Models */,
 				33A3FB12243F67A900FBFBCB /* AppDelegate.swift */,
@@ -144,6 +166,10 @@
 				33A3FB56243FC49300FBFBCB /* WaveView.swift */,
 				33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */,
 				33AACCCF2444EFD700DF3700 /* SpeechStore.swift */,
+				3332887524461933006C3BDE /* NLUStore.swift */,
+				3332887B24465ADC006C3BDE /* camera.json */,
+				3332887A24465ADC006C3BDE /* camera.tflite */,
+				3332887C24465ADC006C3BDE /* vocab.txt */,
 			);
 			path = "Spokestack Studio iOS";
 			sourceTree = "<group>";
@@ -339,8 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				33A3FB4E243F6CC200FBFBCB /* demoData.json in Resources */,
+				3332887D24465ADC006C3BDE /* camera.tflite in Resources */,
 				33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */,
 				33A3FB1C243F67AB00FBFBCB /* Preview Assets.xcassets in Resources */,
+				3332887E24465ADC006C3BDE /* camera.json in Resources */,
+				3332887F24465ADC006C3BDE /* vocab.txt in Resources */,
 				33A3FB19243F67AB00FBFBCB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,10 +426,13 @@
 				33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */,
 				33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */,
 				33AACCCC2444CB1700DF3700 /* TTSDemoDetail.swift in Sources */,
+				3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */,
 				33A3FB53243F838300FBFBCB /* MicButtonView.swift in Sources */,
 				33A3FB43243F6ADD00FBFBCB /* DemoList.swift in Sources */,
 				33A3FB51243F822100FBFBCB /* ASRDemoDetail.swift in Sources */,
+				3332887624461933006C3BDE /* NLUStore.swift in Sources */,
 				33AACCCE2444CC1A00DF3700 /* PipelineStore.swift in Sources */,
+				3332887924462EAE006C3BDE /* NLUDemoDetail.swift in Sources */,
 				33AACCD02444EFD700DF3700 /* SpeechStore.swift in Sources */,
 				33A3FB4B243F6BEF00FBFBCB /* Demo.swift in Sources */,
 				33A3FB46243F6B2000FBFBCB /* DemoRow.swift in Sources */,

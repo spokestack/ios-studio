@@ -11,15 +11,12 @@ import Spokestack
 
 struct ASRDemoDetail: View {
     
-    //@State private var isRecording:Bool = false
-    
     @ObservedObject var store:PipelineStore
     
      var body: some View {
         ZStack {
-            Color("SpokestackBackground").edgesIgnoringSafeArea(.all)
+            Color("SpokestackBackground")
             VStack {
-                
                 Spacer()
                 Text(store.text).foregroundColor(Color("SpokestackPrimary")).padding()
                 Spacer()
@@ -37,6 +34,7 @@ struct ASRDemoDetail: View {
                 )
             }
         }
+        .navigationBarTitle("Speech Recognition")
     }
     
     func recordingView() -> some View {

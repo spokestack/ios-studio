@@ -10,29 +10,33 @@ import SwiftUI
 
 struct DemoList: View {
     
+    init() {
+        UITableViewCell.appearance().backgroundColor = UIColor(named: "SpokestackBackground")
+    }
+    
     var body: some View {
    
         let asrStore = PipelineStore(text: "")
         let ttsStore = SpeechStore()
+        let nluStore = NLUStore(result:nil)
+        nluStore.configureNLU(modelName:"camera",metadataName:"camera")
         
         let demos = [
             DemoView(demo: demoData[0], destination: AnyView(ASRDemoDetail(store: asrStore))),
-            DemoView(demo: demoData[1], destination: AnyView(TTSDemoDetail(asrStore: asrStore, ttsStore: ttsStore)))
+            DemoView(demo: demoData[1], destination: AnyView(TTSDemoDetail(asrStore: asrStore, ttsStore: ttsStore))),
+            DemoView(demo: demoData[2], destination: AnyView(NLUDemoDetail(asrStore: asrStore, nluStore: nluStore)))
         ]
         
         return NavigationView {
-            
+
             List(demos) { demo in
                 NavigationLink(destination: demo.destination) {
                     DemoRow(demo: demo.demo)
                 }
             }
             
-            //.background(Color("SpokestackPrimary").edgesIgnoringSafeArea(.all))
-            .navigationBarTitle(Text("Studio Demos"))
-            .navigationBarItems(leading:
-                Image("HeaderLogo")
-            )
+            .navigationBarTitle(Text("Spokestack Demos"))
+            
         }
     }
 }

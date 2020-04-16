@@ -25,7 +25,6 @@ class SpeechStore:  ObservableObject {
     func speak(_ text: String) {
         let input = TextToSpeechInput(text)
         isSynthesizing = true
-        self.objectWillChange.send()
         tts.speak(input)
     }
     
@@ -43,19 +42,25 @@ extension SpeechStore: TextToSpeechDelegate {
     
     func failure(error: Error) {
         print("tts failed \(error)")
-        isSpeaking = false
-        isSynthesizing = false
+        DispatchQueue.main.async {
+            self.isSpeaking = false
+            self.isSynthesizing = false
+        }
     }
     
     func didBeginSpeaking() {
         print("didBeginSpeaking")
-        isSynthesizing = false
-        isSpeaking = true
+        DispatchQueue.main.async {
+            self.isSynthesizing = false
+            self.isSpeaking = true
+        }
     }
     
     func didFinishSpeaking() {
         print("didFinishSpeaking")
-        isSpeaking = false
+        DispatchQueue.main.async {
+            self.isSpeaking = false
+        }
     }
     
     

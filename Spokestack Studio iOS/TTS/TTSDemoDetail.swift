@@ -12,63 +12,94 @@ struct TTSDemoDetail: View {
     @ObservedObject var asrStore:PipelineStore
     @ObservedObject var ttsStore:SpeechStore
     
+    enum UIState {
+        case intro
+        case ready
+        case listening
+        case synthesizing
+        case speaking
+    }
     
+    @State var uiState:UIState = .intro
     
     var body: some View {
         ZStack {
-            Color("SpokestackBackground").edgesIgnoringSafeArea(.all)
+            Color("SpokestackBackground")
             VStack {
                 
                 Spacer()
-                Text(asrStore.text).foregroundColor(Color("SpokestackPrimary")).padding()
-                (ttsStore.isSynthesizing ? Text("Synthesizing...") : Text("")).padding().transition(
-                    AnyTransition.opacity.animation(Animation.linear(duration: 1))
-                )
-                Spacer()
                 
-                hintView().transition(
-                    AnyTransition.opacity.animation(Animation.linear(duration: 1))
-                ).offset(x: 0, y: 60)
-               
-                recordingView()
-                    .transition(
-                        AnyTransition.opacity.animation(Animation.linear(duration: 1))
-                )
+                if (uiState == .intro) {
+                    Group {
+                        Image("HeaderLogo")
+                        Text("Speech transfer will take the words you speak and repeat them back with a synthesized voice.").font(.body).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
+                        Text("What you hear is the free Spokestack voice. Spokestack can also build a custom synthesized voice for you from audio recordings.").font(.body).fontWeight(.light).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
+                        Text("Tap to continue").font(.body).fontWeight(.light).foregroundColor(.gray).multilineTextAlignment(.center).padding()
+                        
+                    }.gesture(
+                        TapGesture()
+                            .onEnded { _ in
+                                withAnimation {self.uiState = .ready}
+                        }
+                    )
+                    Spacer()
+                }
+                
+                if (uiState == .synthesizing || uiState == .speaking) {
+                    Text(asrStore.text).font(.title).foregroundColor(Color("SpokestackPrimary")).padding()
+                    if (uiState == .synthesizing) {
+                        Text("Synthesizing...").fontWeight(.light).foregroundColor(Color("SpokestackPrimary")).padding()
+                    }
+                    Spacer()
+                }
+                
+                Group {
+                    if (uiState == .ready) {
+                        Group {
+                            Text("Tap the button below & speak")
+                            Image("DownArrow")
+                        }.transition(.opacity)
+                    }
+                    
+                    if (uiState == .ready || uiState == .listening) {
+                        MicButtonView(store:asrStore).transition(.opacity)
+                    }
+                }.offset(x: 0, y: 60)
+                
+                if (uiState == .listening || uiState == .synthesizing || uiState == .speaking) {
+                    WaveView().frame(height: 100.0).transition(.opacity)
+                } else if (uiState == .ready) {
+                    Spacer().frame(height: 108.0).transition(.opacity)
+                }
+                
+                
             }.onReceive(asrStore.$text, perform: { text in
-                if (text.count > 0) {
+                print("onreceive \(text) \(self.uiState)")
+                if (text.count > 0 && self.uiState == .listening) {
+                    withAnimation{self.uiState = .synthesizing}
                     self.ttsStore.speak(text)
                 }
-            })
-        }
-    }
-    
-    func recordingView() -> some View {
-        print("is speaking \(ttsStore.isSpeaking)")
-        return Group {
-            if (asrStore.isPipelineActive || ttsStore.isSpeaking) {
-                WaveView().frame(height: 100.0)
-            } else {
-                Spacer().frame(height: 108.0)
-            }
-        }
-    }
-    
-    func hintView() -> some View {
-        return VStack {
-            Group {
-                if (ttsStore.isSpeaking || ttsStore.isSynthesizing) {
-                    
-                } else if (asrStore.isPipelineActive) {
-                    MicButtonView(store:asrStore)
-                } else {
-                    Text("Tap the button below & speak")
-                    Image("DownArrow")
-                    MicButtonView(store:asrStore)
+            }).onReceive(asrStore.$isPipelineActive, perform: { isPipelineActive in
+                print("onreceive pipeline \(isPipelineActive) \(self.uiState)")
+                if (isPipelineActive) {
+                    withAnimation{self.uiState = .listening}
                 }
-            }
-            
-        }
+                
+            })
+                .onReceive(ttsStore.$isSpeaking, perform: { isSpeaking in
+                    print("onreceive speaking \(isSpeaking) \(self.uiState)")
+                    withAnimation{
+                        if (isSpeaking == false && self.uiState == .speaking) {
+                            self.uiState = .ready
+                        } else if (isSpeaking == true) {
+                            self.uiState = .speaking
+                        }
+                        
+                    }
+                })
+        }.navigationBarTitle("Speech Transfer")
     }
+    
 }
 
 struct TTSDemoDetail_Previews: PreviewProvider {
