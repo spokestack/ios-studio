@@ -59,6 +59,9 @@ struct MicButtonListeningView: View {
 
 struct MicButtonListeningView_Previews: PreviewProvider {
     static var previews: some View {
-        MicButtonListeningView(compression: 20.0).background(Color("SpokestackPrimary"))
+        Group {
+            MicButtonListeningView(compression: 20.0).background(Color("SpokestackBlue")).environment(\.colorScheme, .dark)
+            MicButtonListeningView(compression: 20.0).background(Color("SpokestackBlue")).environment(\.colorScheme, .light)
+        }
     }
 }

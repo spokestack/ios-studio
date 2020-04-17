@@ -59,7 +59,7 @@ struct DemoList_Previews: PreviewProvider {
         ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
             DemoList()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
+                .previewDisplayName(deviceName).environment(\.colorScheme, .dark)
         }
     }
 }

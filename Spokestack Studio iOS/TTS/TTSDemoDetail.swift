@@ -31,17 +31,12 @@ struct TTSDemoDetail: View {
                 
                 if (uiState == .intro) {
                     Group {
-                        Image("HeaderLogo")
                         Text("Speech transfer will take the words you speak and repeat them back with a synthesized voice.").font(.body).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
                         Text("What you hear is the free Spokestack voice. Spokestack can also build a custom synthesized voice for you from audio recordings.").font(.body).fontWeight(.light).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
-                        Text("Tap to continue").font(.body).fontWeight(.light).foregroundColor(.gray).multilineTextAlignment(.center).padding()
-                        
-                    }.gesture(
-                        TapGesture()
-                            .onEnded { _ in
-                                withAnimation {self.uiState = .ready}
-                        }
-                    )
+                        Button(action:{withAnimation {self.uiState = .ready}}){
+                                Text("Continue")
+                        }.padding()
+                    }
                     Spacer()
                 }
                 
@@ -57,7 +52,7 @@ struct TTSDemoDetail: View {
                     if (uiState == .ready) {
                         Group {
                             Text("Tap the button below & speak")
-                            Image("DownArrow")
+                            HintArrowView(arrowheadSize:6).frame(width: 200, height: 150).foregroundColor(Color.primary)
                         }.transition(.opacity)
                     }
                     

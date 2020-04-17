@@ -51,7 +51,7 @@ struct ASRDemoDetail: View {
         Group {
             if (!store.isPipelineActive) {
                 Text("Tap the button below & speak")
-                Image("DownArrow")
+                HintArrowView(arrowheadSize:6).frame(width: 200, height: 150).foregroundColor(Color.primary)
             }
         }
     }

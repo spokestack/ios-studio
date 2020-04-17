@@ -29,17 +29,14 @@ struct NLUDemoDetail: View {
             
             if (uiState == .intro) {
                 VStack {
-                    Image("HeaderLogo")
                     Text("Natural language understanding (NLU) converts text into a an \"intent\" that your app can understand. The types of intents that your app will understand depends on the type of NLU model loaded.").font(.body).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
                     Text("Spokestack provides on-device NLU models for many use cases. This demo model is to control a camera app.").font(.body).fontWeight(.light).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
-                    Text("Tap to continue").font(.body).fontWeight(.light).foregroundColor(.gray).multilineTextAlignment(.center).padding()
                     
-                }.gesture(
-                    TapGesture()
-                        .onEnded { _ in
-                            withAnimation {self.uiState = .ready}
-                    }
-                )
+                    Button(action:{withAnimation {self.uiState = .ready}}){
+                            Text("Continue")
+                    }.padding()
+                    
+                }
                 Spacer()
             } else if (uiState == .listening || uiState == .ready) {
                 VStack {
@@ -49,7 +46,7 @@ struct NLUDemoDetail: View {
                         if (uiState == .ready) {
                             Group {
                                 Text("Tap the button below & speak")
-                                Image("DownArrow")
+                                HintArrowView(arrowheadSize:6).frame(width: 200, height: 150).foregroundColor(Color.primary)
                             }.transition(.opacity)
                         }
                         
@@ -98,6 +95,15 @@ struct NLUDemoDetail: View {
 
 struct NLUDemoDetail_Previews: PreviewProvider {
     static var previews: some View {
-        NLUDemoDetail(asrStore: PipelineStore(text:""), nluStore: NLUStore(result:NLUResult(utterance: "test utterance", intent: "test.utterance", confidence: 0.99)))
+        
+        
+        Group {
+           NLUDemoDetail(asrStore: PipelineStore(text:""), nluStore: NLUStore(result:NLUResult(utterance: "test utterance", intent: "test.utterance", confidence: 0.99)))
+              .environment(\.colorScheme, .light)
+
+           NLUDemoDetail(asrStore: PipelineStore(text:""), nluStore: NLUStore(result:NLUResult(utterance: "test utterance", intent: "test.utterance", confidence: 0.99)))
+              .environment(\.colorScheme, .dark)
+        }
+        
     }
 }

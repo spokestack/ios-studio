@@ -30,10 +30,10 @@ struct MicButtonView: View {
                     }
                 }
                 .padding(store.isPipelineActive ? 10 : 30.0)
-                .foregroundColor(.white)
-                .background(Color("SpokestackPrimary"))
+                .foregroundColor(Color.white)
+                .background(Color("SpokestackBlue"))
                 .cornerRadius(40)
-                .shadow(color: Color("SpokestackPrimary"), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .shadow(color: Color("SpokestackBlue"), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             }
                 
         }
@@ -50,7 +50,10 @@ struct MicButtonView_Previews: PreviewProvider {
       @State var isRecording: Bool = false
 
       var body: some View {
-        MicButtonView(store: PipelineStore(text: ""))
+        Group {
+        MicButtonView(store: PipelineStore(text: "")).environment(\.colorScheme, .light)
+            MicButtonView(store: PipelineStore(text: "")).environment(\.colorScheme, .dark)
+        }
       }
     }
 }
