@@ -29,15 +29,18 @@ struct NLUDemoDetail: View {
             
             if (uiState == .intro) {
                 VStack {
-                    Text("Natural language understanding (NLU) converts text into a an \"intent\" that your app can understand. The types of intents that your app will understand depends on the type of NLU model loaded.").font(.body).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
-                    Text("Spokestack provides on-device NLU models for many use cases. This demo model is to control a camera app.").font(.body).fontWeight(.light).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
-                    
+                    Spacer()
+                    VStack {
+                        Text("Natural language understanding (NLU) converts text into a an \"intent\" that your app can understand. The types of intents that your app will understand depends on the type of NLU model loaded.").font(.body).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
+                        Text("Spokestack provides on-device NLU models for many use cases. This demo model is to control a camera app.").font(.body).fontWeight(.light).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
+
+                    }.background(/*@START_MENU_TOKEN@*/Color("SpokestackForeground")/*@END_MENU_TOKEN@*/).cornerRadius(10).padding()
+                    Spacer()
                     Button(action:{withAnimation {self.uiState = .ready}}){
-                            Text("Continue")
-                    }.padding()
-                    
+                        Text("Continue").foregroundColor(/*@START_MENU_TOKEN@*/Color("SpokestackForeground")/*@END_MENU_TOKEN@*/).padding().padding(.horizontal, 20.0)
+                    }.background(Color("SpokestackPrimary")).cornerRadius(20).shadow(color: Color("SpokestackBlue"), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    Spacer()
                 }
-                Spacer()
             } else if (uiState == .listening || uiState == .ready) {
                 VStack {
                     Spacer()

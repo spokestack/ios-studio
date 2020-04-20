@@ -30,13 +30,18 @@ struct TTSDemoDetail: View {
                 Spacer()
                 
                 if (uiState == .intro) {
-                    Group {
+                    VStack {
                         Text("Speech transfer will take the words you speak and repeat them back with a synthesized voice.").font(.body).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
                         Text("What you hear is the free Spokestack voice. Spokestack can also build a custom synthesized voice for you from audio recordings.").font(.body).fontWeight(.light).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
-                        Button(action:{withAnimation {self.uiState = .ready}}){
-                                Text("Continue")
-                        }.padding()
-                    }
+                        
+                    }.background(/*@START_MENU_TOKEN@*/Color("SpokestackForeground")/*@END_MENU_TOKEN@*/).cornerRadius(10).padding()
+                    
+                    Spacer()
+                    
+                    Button(action:{withAnimation {self.uiState = .ready}}){
+                        Text("Continue").foregroundColor(/*@START_MENU_TOKEN@*/Color("SpokestackForeground")/*@END_MENU_TOKEN@*/).padding().padding(.horizontal, 20.0)
+                    }.background(Color("SpokestackPrimary")).cornerRadius(20).shadow(color: Color("SpokestackBlue"), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    
                     Spacer()
                 }
                 
