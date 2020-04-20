@@ -37,7 +37,8 @@ struct DemoList: View {
             
             .navigationBarTitle(Text("Spokestack Demos"))
             
-        }
+            
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
