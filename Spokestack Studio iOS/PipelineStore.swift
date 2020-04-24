@@ -11,13 +11,19 @@ import Spokestack
 
 class PipelineStore: ObservableObject {
     
-    @Published var isPipelineActive: Bool
+    @Published var isListening: Bool
     @Published var text: String
+    
+    enum PipelineMode {
+        case push2talk
+        case wakeword
+    }
+    
+    private var mode:PipelineMode = .push2talk
     
     init(text: String) {
         self.text = text
-        self.isPipelineActive = false;
-        self.pipeline.start()
+        self.isListening = false;
     }
     
     lazy private var pipeline: SpeechPipeline = {
@@ -25,44 +31,84 @@ class PipelineStore: ObservableObject {
         return SpeechPipeline(self, pipelineDelegate: self)
     }()
     
-}
-
-extension PipelineStore: SpeechEventListener {
-    func activate() {
-        print("activated pipeline")
-        self.pipeline.activate()
-        text = ""
-        isPipelineActive = true
+    func startPipeline() {
+        print("[\(mode)] starting pipeline")
+        self.pipeline.start()
+    }
+    
+    func configure(mode:PipelineMode) {
+        print("configured mode \(mode)")
+        self.mode = mode
+        DispatchQueue.main.async {
+            self.text = ""
+        }
     }
 
-    func deactivate() {
-        print("deactivated pipeline")
+    func stopPipeline() {
+        print("[\(mode)] stopping pipeline")
+        self.pipeline.stop()
+    }
+    
+    func activatePipeline() {
+        print("[\(mode)] manually activating pipeline")
+        self.pipeline.activate()
+        DispatchQueue.main.async {
+            self.text = ""
+            self.isListening = true
+        }
+        
+    }
+    
+    func deactivatePipeline() {
+        print("[\(mode)] manually deactivating pipeline")
         self.pipeline.deactivate()
         DispatchQueue.main.async {
-            self.isPipelineActive = false
+            self.isListening = false
         }
     }
     
+}
+
+extension PipelineStore: SpeechEventListener {
+    
+    func activate() {
+        print("[\(mode)] heard wakeword")
+        if (mode == .wakeword) {
+            self.pipeline.activate()
+            DispatchQueue.main.async {
+                self.isListening = true
+            }
+        }
+    }
+
+    func deactivate() {
+        print("[\(mode)] heard speech ended")
+        //this gets called after the user stops talking
+        //we need to actually deactive the pipeline next
+        self.pipeline.deactivate()
+        DispatchQueue.main.async {
+            self.isListening = false
+        }
+    }
     
     func didError(_ error: Error) {
-        print("did didError \(error)")
+        print("[\(mode)] did didError \(error)")
     }
     
     func didTrace(_ trace: String) {
-        print("did trace \(trace)")
+        print("[\(mode)] did trace \(trace)")
     }
     
     func didRecognize(_ result: SpeechContext) {
         
-        print("didRecognize \(result.isSpeech) and transscript \(result.transcript)")
+        print("[\(mode)] didRecognize \(result.isSpeech) and transscript \(result.transcript)")
         DispatchQueue.main.async {
             self.text = result.transcript
-    
         }
     }
 
     func didTimeout() {
-        print("didTimeout")
+        print("[\(mode)] didTimeout")
     }
     
 
@@ -70,19 +116,19 @@ extension PipelineStore: SpeechEventListener {
 
 extension PipelineStore: PipelineDelegate {
     func didInit() {
-        print("didInit")
+        print("[\(mode)] didInit")
     }
     
     func didStart() {
-        print("didStart")
+        print("[\(mode)] didStart")
     }
     
     func didStop() {
-        print("didStop")
+        print("[\(mode)] didStop")
     }
     
     func setupFailed(_ error: String) {
-        print("setup failed \(error)")
+        print("[\(mode)] setup failed \(error)")
     }
     
 }

@@ -13,6 +13,9 @@
 		3332887D24465ADC006C3BDE /* camera.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3332887A24465ADC006C3BDE /* camera.tflite */; };
 		3332887E24465ADC006C3BDE /* camera.json in Resources */ = {isa = PBXBuildFile; fileRef = 3332887B24465ADC006C3BDE /* camera.json */; };
 		3332887F24465ADC006C3BDE /* vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3332887C24465ADC006C3BDE /* vocab.txt */; };
+		3352E927244F6F6800890B7E /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3352E926244F6F6800890B7E /* LaunchView.swift */; };
+		33578B7124533C9100714B6A /* WakewordDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B7024533C9100714B6A /* WakewordDemoDetail.swift */; };
+		33744541244E5A6D0049A50C /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33744540244E5A6D0049A50C /* Permissions.swift */; };
 		3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398470224478D9C000C4242 /* ClassifyingView.swift */; };
 		33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB12243F67A900FBFBCB /* AppDelegate.swift */; };
 		33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */; };
@@ -61,6 +64,9 @@
 		3332887A24465ADC006C3BDE /* camera.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera.tflite; sourceTree = "<group>"; };
 		3332887B24465ADC006C3BDE /* camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camera.json; sourceTree = "<group>"; };
 		3332887C24465ADC006C3BDE /* vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vocab.txt; sourceTree = "<group>"; };
+		3352E926244F6F6800890B7E /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		33578B7024533C9100714B6A /* WakewordDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakewordDemoDetail.swift; sourceTree = "<group>"; };
+		33744540244E5A6D0049A50C /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
 		3398470224478D9C000C4242 /* ClassifyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyingView.swift; sourceTree = "<group>"; };
 		33A3FB0F243F67A900FBFBCB /* Spokestack Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spokestack Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A3FB12243F67A900FBFBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +132,22 @@
 			path = NLU;
 			sourceTree = "<group>";
 		};
+		33578B6F24533C4500714B6A /* Wakeword */ = {
+			isa = PBXGroup;
+			children = (
+				33578B7024533C9100714B6A /* WakewordDemoDetail.swift */,
+			);
+			path = Wakeword;
+			sourceTree = "<group>";
+		};
+		3374453F244E55430049A50C /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				33744540244E5A6D0049A50C /* Permissions.swift */,
+			);
+			path = Permissions;
+			sourceTree = "<group>";
+		};
 		33A3FB06243F67A900FBFBCB = {
 			isa = PBXGroup;
 			children = (
@@ -151,10 +173,12 @@
 		33A3FB11243F67A900FBFBCB /* Spokestack Studio iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3374453F244E55430049A50C /* Permissions */,
 				33A3FB44243F6AE700FBFBCB /* Home */,
 				33A3FB4F243F81BC00FBFBCB /* ASR */,
 				33AACCC82444BB3D00DF3700 /* TTS */,
 				3332887724462CB0006C3BDE /* NLU */,
+				33578B6F24533C4500714B6A /* Wakeword */,
 				33A3FB4C243F6C9400FBFBCB /* Resources */,
 				33A3FB47243F6B7A00FBFBCB /* Models */,
 				33A3FB12243F67A900FBFBCB /* AppDelegate.swift */,
@@ -208,6 +232,7 @@
 			children = (
 				33A3FB42243F6ADD00FBFBCB /* DemoList.swift */,
 				33A3FB45243F6B2000FBFBCB /* DemoRow.swift */,
+				3352E926244F6F6800890B7E /* LaunchView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -426,9 +451,12 @@
 				33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */,
 				33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */,
 				33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */,
+				33578B7124533C9100714B6A /* WakewordDemoDetail.swift in Sources */,
 				33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */,
+				33744541244E5A6D0049A50C /* Permissions.swift in Sources */,
 				3310B776244A15740015C812 /* HintArrowView.swift in Sources */,
 				33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */,
+				3352E927244F6F6800890B7E /* LaunchView.swift in Sources */,
 				33AACCCC2444CB1700DF3700 /* TTSDemoDetail.swift in Sources */,
 				3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */,
 				33A3FB53243F838300FBFBCB /* MicButtonView.swift in Sources */,
@@ -606,7 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020052001;
+				CURRENT_PROJECT_VERSION = 2020052401;
 				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = Z7TPYC529T;
 				ENABLE_PREVIEWS = YES;
@@ -630,7 +658,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020052001;
+				CURRENT_PROJECT_VERSION = 2020052401;
 				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = Z7TPYC529T;
 				ENABLE_PREVIEWS = YES;

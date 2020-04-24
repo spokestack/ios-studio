@@ -84,13 +84,17 @@ struct NLUDemoDetail: View {
                         self.uiState = .classifying
                     }
                 }
-        }.onReceive(asrStore.$isPipelineActive, perform: { isPipelineActive in
-            print("onreceive pipeline \(isPipelineActive) \(self.uiState)")
-            if (isPipelineActive) {
+        }
+        .onReceive(asrStore.$isListening, perform: { isListening in
+            print("onreceive pipeline \(isListening) \(self.uiState)")
+            if (isListening) {
                 withAnimation{self.uiState = .listening}
             }
             
         })
+        .onAppear {
+            self.asrStore.configure(mode: .push2talk)
+        }
     }
     
     

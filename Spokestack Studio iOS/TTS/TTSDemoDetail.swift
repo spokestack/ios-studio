@@ -79,9 +79,9 @@ struct TTSDemoDetail: View {
                     withAnimation{self.uiState = .synthesizing}
                     self.ttsStore.speak(text)
                 }
-            }).onReceive(asrStore.$isPipelineActive, perform: { isPipelineActive in
-                print("onreceive pipeline \(isPipelineActive) \(self.uiState)")
-                if (isPipelineActive) {
+            }).onReceive(asrStore.$isListening, perform: { isListening in
+                print("onreceive pipeline \(isListening) \(self.uiState)")
+                if (isListening) {
                     withAnimation{self.uiState = .listening}
                 }
                 
@@ -97,7 +97,11 @@ struct TTSDemoDetail: View {
                         
                     }
                 })
-        }.navigationBarTitle("Speech Transfer")
+        }
+        .navigationBarTitle("Speech Transfer")
+        .onAppear {
+            self.asrStore.configure(mode: .push2talk)
+        }
     }
     
 }

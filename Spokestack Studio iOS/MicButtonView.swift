@@ -16,20 +16,20 @@ struct MicButtonView: View {
     var body: some View {
         VStack {
             Button(action: {
-                if (self.store.isPipelineActive) {
-                    self.store.deactivate()
+                if (self.store.isListening) {
+                    self.store.deactivatePipeline()
                 } else {
-                    self.store.activate()
+                    self.store.activatePipeline()
                 }
             }) {
                 HStack {
-                    if (store.isPipelineActive) {
+                    if (store.isListening) {
                         MicButtonListeningView(compression: 3).frame(width: 58, height: 58)
                     } else {
                         Image(systemName: "mic").font(.title)
                     }
                 }
-                .padding(store.isPipelineActive ? 10 : 30.0)
+                .padding(store.isListening ? 10 : 30.0)
                 .foregroundColor(Color.white)
                 .background(Color("SpokestackBlue"))
                 .cornerRadius(40)
