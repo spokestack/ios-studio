@@ -18,7 +18,7 @@ struct ASRDemoDetail: View {
             Color("SpokestackBackground")
             VStack {
                 Spacer()
-                Text(store.text).foregroundColor(Color("SpokestackPrimary")).padding()
+                Text(store.text).font(.title).foregroundColor(Color("SpokestackPrimary")).padding()
                 Spacer()
                 VStack {
                     Group {

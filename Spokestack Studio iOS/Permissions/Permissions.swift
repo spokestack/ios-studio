@@ -65,7 +65,7 @@ struct Permissions: View {
             VStack {
                 
                 VStack {
-                    Text("Spokestack Studio needs your permission to use the voice features of your device. Please tap each permission below to approve and continue.").font(.body).foregroundColor(Color("SpokestackPrimary")).multilineTextAlignment(.center).padding()
+                    Text("Spokestack Studio needs your permission to use the voice features of your device. Please tap each permission below to approve and continue.").font(.body).multilineTextAlignment(.center).padding()
                     
                 }.background(/*@START_MENU_TOKEN@*/Color("SpokestackForeground")/*@END_MENU_TOKEN@*/).cornerRadius(10).padding()
                 
@@ -78,14 +78,16 @@ struct Permissions: View {
                             VStack(alignment: .leading) {
                                 Text("Microphone Access")
                                     .font(.headline)
+                                    .foregroundColor(Color.black)
                                 Text("Listens for your voice")
                                     .font(.subheadline)
+                                    .foregroundColor(Color.black)
                             }
                             Spacer()
                             if (micState == .authorized) {
-                                Image(systemName: "checkmark.circle.fill").font(.headline).foregroundColor(Color("SpokestackBlue"))
+                                Image(systemName: "checkmark.circle.fill").font(.title).foregroundColor(Color("SpokestackBlue"))
                             } else {
-                                Image(systemName: "minus.circle").font(.headline)
+                                Image(systemName: "minus.circle").font(.title)
                             }
                         }
                     }
@@ -100,14 +102,16 @@ struct Permissions: View {
                             VStack(alignment: .leading) {
                                 Text("Speech Recognition Access")
                                     .font(.headline)
+                                    .foregroundColor(Color.black)
                                 Text("Understands your voice")
                                     .font(.subheadline)
+                                    .foregroundColor(Color.black)
                             }
                             Spacer()
                             if (asrState == .authorized) {
-                                Image(systemName: "checkmark.circle.fill").font(.headline).foregroundColor(Color("SpokestackBlue"))
+                                Image(systemName: "checkmark.circle.fill").font(.title).foregroundColor(Color("SpokestackBlue"))
                             } else {
-                                Image(systemName: "minus.circle").font(.headline)
+                                Image(systemName: "minus.circle").font(.title)
                             }
                         }
                     }

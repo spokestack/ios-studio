@@ -15,6 +15,12 @@
 		3332887F24465ADC006C3BDE /* vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3332887C24465ADC006C3BDE /* vocab.txt */; };
 		3352E927244F6F6800890B7E /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3352E926244F6F6800890B7E /* LaunchView.swift */; };
 		33578B7124533C9100714B6A /* WakewordDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B7024533C9100714B6A /* WakewordDemoDetail.swift */; };
+		3359D6E3245731E000AA591D /* modelData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E2245731E000AA591D /* modelData.json */; };
+		3359D6E62457501300AA591D /* mobile.json in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E42457501200AA591D /* mobile.json */; };
+		3359D6E72457501300AA591D /* mobile.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E52457501300AA591D /* mobile.tflite */; };
+		3359D6EA245750F000AA591D /* timer.json in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E8245750F000AA591D /* timer.json */; };
+		3359D6EB245750F000AA591D /* timer.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E9245750F000AA591D /* timer.tflite */; };
+		3359D6ED245751BB00AA591D /* NLUModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359D6EC245751BB00AA591D /* NLUModel.swift */; };
 		33744541244E5A6D0049A50C /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33744540244E5A6D0049A50C /* Permissions.swift */; };
 		3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398470224478D9C000C4242 /* ClassifyingView.swift */; };
 		33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB12243F67A900FBFBCB /* AppDelegate.swift */; };
@@ -66,6 +72,12 @@
 		3332887C24465ADC006C3BDE /* vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vocab.txt; sourceTree = "<group>"; };
 		3352E926244F6F6800890B7E /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		33578B7024533C9100714B6A /* WakewordDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakewordDemoDetail.swift; sourceTree = "<group>"; };
+		3359D6E2245731E000AA591D /* modelData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modelData.json; sourceTree = "<group>"; };
+		3359D6E42457501200AA591D /* mobile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile.json; sourceTree = "<group>"; };
+		3359D6E52457501300AA591D /* mobile.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobile.tflite; sourceTree = "<group>"; };
+		3359D6E8245750F000AA591D /* timer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timer.json; sourceTree = "<group>"; };
+		3359D6E9245750F000AA591D /* timer.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = timer.tflite; sourceTree = "<group>"; };
+		3359D6EC245751BB00AA591D /* NLUModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUModel.swift; sourceTree = "<group>"; };
 		33744540244E5A6D0049A50C /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
 		3398470224478D9C000C4242 /* ClassifyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyingView.swift; sourceTree = "<group>"; };
 		33A3FB0F243F67A900FBFBCB /* Spokestack Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spokestack Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,9 +205,6 @@
 				33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */,
 				33AACCCF2444EFD700DF3700 /* SpeechStore.swift */,
 				3332887524461933006C3BDE /* NLUStore.swift */,
-				3332887B24465ADC006C3BDE /* camera.json */,
-				3332887A24465ADC006C3BDE /* camera.tflite */,
-				3332887C24465ADC006C3BDE /* vocab.txt */,
 				3310B775244A15740015C812 /* HintArrowView.swift */,
 			);
 			path = "Spokestack Studio iOS";
@@ -242,6 +251,7 @@
 			children = (
 				33A3FB48243F6B9800FBFBCB /* Data.swift */,
 				33A3FB4A243F6BEF00FBFBCB /* Demo.swift */,
+				3359D6EC245751BB00AA591D /* NLUModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,7 +259,15 @@
 		33A3FB4C243F6C9400FBFBCB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3359D6E8245750F000AA591D /* timer.json */,
+				3359D6E9245750F000AA591D /* timer.tflite */,
+				3359D6E42457501200AA591D /* mobile.json */,
+				3359D6E52457501300AA591D /* mobile.tflite */,
+				3332887B24465ADC006C3BDE /* camera.json */,
+				3332887A24465ADC006C3BDE /* camera.tflite */,
+				3332887C24465ADC006C3BDE /* vocab.txt */,
 				33A3FB4D243F6CC200FBFBCB /* demoData.json */,
+				3359D6E2245731E000AA591D /* modelData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -392,13 +410,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3359D6E62457501300AA591D /* mobile.json in Resources */,
 				33A3FB4E243F6CC200FBFBCB /* demoData.json in Resources */,
+				3359D6E3245731E000AA591D /* modelData.json in Resources */,
 				3332887D24465ADC006C3BDE /* camera.tflite in Resources */,
 				33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */,
+				3359D6EA245750F000AA591D /* timer.json in Resources */,
 				33A3FB1C243F67AB00FBFBCB /* Preview Assets.xcassets in Resources */,
 				3332887E24465ADC006C3BDE /* camera.json in Resources */,
+				3359D6E72457501300AA591D /* mobile.tflite in Resources */,
 				3332887F24465ADC006C3BDE /* vocab.txt in Resources */,
 				33A3FB19243F67AB00FBFBCB /* Assets.xcassets in Resources */,
+				3359D6EB245750F000AA591D /* timer.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +475,7 @@
 				33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */,
 				33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */,
 				33578B7124533C9100714B6A /* WakewordDemoDetail.swift in Sources */,
+				3359D6ED245751BB00AA591D /* NLUModel.swift in Sources */,
 				33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */,
 				33744541244E5A6D0049A50C /* Permissions.swift in Sources */,
 				3310B776244A15740015C812 /* HintArrowView.swift in Sources */,
@@ -634,7 +658,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020052401;
+				CURRENT_PROJECT_VERSION = 2020053101;
 				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = Z7TPYC529T;
 				ENABLE_PREVIEWS = YES;
@@ -658,7 +682,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020052401;
+				CURRENT_PROJECT_VERSION = 2020053101;
 				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = Z7TPYC529T;
 				ENABLE_PREVIEWS = YES;

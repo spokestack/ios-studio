@@ -1,0 +1,31 @@
+
+[
+    {
+        "id":1,
+        "name":"Camera",
+        "modelFile":"camera",
+        "metadataFile":"camera",
+        "revision":"a342259",
+        "examples":["Take a picture.","Start a video.","Share this photo on Twitter."],
+        "description":"Voice control of your phone's camera."
+    },
+    {
+        "id":2,
+        "name":"App Navigation",
+        "modelFile":"mobile",
+        "metadataFile":"mobile",
+        "revision":"f9c1e43",
+        "examples":["Go to the next message.","Show the second item in the results.","Go to my account settings."],
+        "description":"Navigate app features and search results."
+    },
+    {
+        "id":3,
+        "name":"Fitness Timer",
+        "modelFile":"timer",
+        "metadataFile":"timer",
+        "revision":"0b707fc",
+        "examples":["Start a 30 second timer.","How much time is left?","Start a 5 round Tabata timer."],
+        "description":"Control a fitness timer with your voice."
+    }
+
+]

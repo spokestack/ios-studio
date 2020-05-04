@@ -9,6 +9,7 @@
 import Foundation
 
 let demoData: [Demo] = load("demoData.json")
+let modelData: [NLUModel] = load("modelData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
