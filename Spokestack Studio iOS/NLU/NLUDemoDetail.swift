@@ -142,11 +142,24 @@ struct NLUDemoDetail: View {
                     }
                 }
                 
-                MicButtonView(store:asrStore).transition(.opacity)
+                Button(action:{
+                    if (self.asrStore.isListening) {
+                        self.asrStore.deactivatePipeline()
+                    } else {
+                        self.asrStore.activatePipeline()
+                    }
+                    
+                }) {
+                    ListeningIcon(isListening:$asrStore.isListening)
+                        .foregroundColor(Color.white)
+                    .background(Color("SpokestackBlue"))
+                    .cornerRadius(40)
+                    .shadow(color: Color("SpokestackBlue"), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                }.transition(.opacity)
             }.offset(x: 0, y: 60)
             
             if (uiState == .listening) {
-                WaveView().frame(height: 100.0).transition(.opacity)
+                WaveView().foregroundColor(Color("SpokestackBlue")).frame(height: 100.0).transition(.opacity)
             } else if (uiState == .ready) {
                 Spacer().frame(height: 108.0).transition(.opacity)
             }
