@@ -21,6 +21,7 @@
 		3359D6EA245750F000AA591D /* timer.json in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E8245750F000AA591D /* timer.json */; };
 		3359D6EB245750F000AA591D /* timer.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E9245750F000AA591D /* timer.tflite */; };
 		3359D6ED245751BB00AA591D /* NLUModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359D6EC245751BB00AA591D /* NLUModel.swift */; };
+		3372BF6B2460D6C000EFB111 /* ListeningIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3372BF6A2460D6C000EFB111 /* ListeningIcon.swift */; };
 		33744541244E5A6D0049A50C /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33744540244E5A6D0049A50C /* Permissions.swift */; };
 		3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398470224478D9C000C4242 /* ClassifyingView.swift */; };
 		33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB12243F67A900FBFBCB /* AppDelegate.swift */; };
@@ -36,8 +37,6 @@
 		33A3FB4B243F6BEF00FBFBCB /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB4A243F6BEF00FBFBCB /* Demo.swift */; };
 		33A3FB4E243F6CC200FBFBCB /* demoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB4D243F6CC200FBFBCB /* demoData.json */; };
 		33A3FB51243F822100FBFBCB /* ASRDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */; };
-		33A3FB53243F838300FBFBCB /* MicButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB52243F838300FBFBCB /* MicButtonView.swift */; };
-		33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */; };
 		33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB56243FC49300FBFBCB /* WaveView.swift */; };
 		33AACCCC2444CB1700DF3700 /* TTSDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AACCCB2444CB1700DF3700 /* TTSDemoDetail.swift */; };
 		33AACCCE2444CC1A00DF3700 /* PipelineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */; };
@@ -78,6 +77,7 @@
 		3359D6E8245750F000AA591D /* timer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timer.json; sourceTree = "<group>"; };
 		3359D6E9245750F000AA591D /* timer.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = timer.tflite; sourceTree = "<group>"; };
 		3359D6EC245751BB00AA591D /* NLUModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUModel.swift; sourceTree = "<group>"; };
+		3372BF6A2460D6C000EFB111 /* ListeningIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningIcon.swift; sourceTree = "<group>"; };
 		33744540244E5A6D0049A50C /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
 		3398470224478D9C000C4242 /* ClassifyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyingView.swift; sourceTree = "<group>"; };
 		33A3FB0F243F67A900FBFBCB /* Spokestack Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spokestack Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,8 +99,6 @@
 		33A3FB4A243F6BEF00FBFBCB /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		33A3FB4D243F6CC200FBFBCB /* demoData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demoData.json; sourceTree = "<group>"; };
 		33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASRDemoDetail.swift; sourceTree = "<group>"; };
-		33A3FB52243F838300FBFBCB /* MicButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicButtonView.swift; sourceTree = "<group>"; };
-		33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicButtonListeningView.swift; sourceTree = "<group>"; };
 		33A3FB56243FC49300FBFBCB /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 		33AACCCB2444CB1700DF3700 /* TTSDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSDemoDetail.swift; sourceTree = "<group>"; };
 		33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineStore.swift; sourceTree = "<group>"; };
@@ -152,6 +150,16 @@
 			path = Wakeword;
 			sourceTree = "<group>";
 		};
+		3372BF692460D66F00EFB111 /* Shared Components */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB56243FC49300FBFBCB /* WaveView.swift */,
+				3310B775244A15740015C812 /* HintArrowView.swift */,
+				3372BF6A2460D6C000EFB111 /* ListeningIcon.swift */,
+			);
+			path = "Shared Components";
+			sourceTree = "<group>";
+		};
 		3374453F244E55430049A50C /* Permissions */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +193,7 @@
 		33A3FB11243F67A900FBFBCB /* Spokestack Studio iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3372BF692460D66F00EFB111 /* Shared Components */,
 				3374453F244E55430049A50C /* Permissions */,
 				33A3FB44243F6AE700FBFBCB /* Home */,
 				33A3FB4F243F81BC00FBFBCB /* ASR */,
@@ -199,13 +208,9 @@
 				33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */,
 				33A3FB20243F67AB00FBFBCB /* Info.plist */,
 				33A3FB1A243F67AB00FBFBCB /* Preview Content */,
-				33A3FB52243F838300FBFBCB /* MicButtonView.swift */,
-				33A3FB54243FA6E800FBFBCB /* MicButtonListeningView.swift */,
-				33A3FB56243FC49300FBFBCB /* WaveView.swift */,
 				33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */,
 				33AACCCF2444EFD700DF3700 /* SpeechStore.swift */,
 				3332887524461933006C3BDE /* NLUStore.swift */,
-				3310B775244A15740015C812 /* HintArrowView.swift */,
 			);
 			path = "Spokestack Studio iOS";
 			sourceTree = "<group>";
@@ -476,14 +481,12 @@
 				33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */,
 				33578B7124533C9100714B6A /* WakewordDemoDetail.swift in Sources */,
 				3359D6ED245751BB00AA591D /* NLUModel.swift in Sources */,
-				33A3FB55243FA6E800FBFBCB /* MicButtonListeningView.swift in Sources */,
 				33744541244E5A6D0049A50C /* Permissions.swift in Sources */,
 				3310B776244A15740015C812 /* HintArrowView.swift in Sources */,
 				33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */,
 				3352E927244F6F6800890B7E /* LaunchView.swift in Sources */,
 				33AACCCC2444CB1700DF3700 /* TTSDemoDetail.swift in Sources */,
 				3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */,
-				33A3FB53243F838300FBFBCB /* MicButtonView.swift in Sources */,
 				33A3FB43243F6ADD00FBFBCB /* DemoList.swift in Sources */,
 				33A3FB51243F822100FBFBCB /* ASRDemoDetail.swift in Sources */,
 				3332887624461933006C3BDE /* NLUStore.swift in Sources */,
@@ -491,6 +494,7 @@
 				3332887924462EAE006C3BDE /* NLUDemoDetail.swift in Sources */,
 				33AACCD02444EFD700DF3700 /* SpeechStore.swift in Sources */,
 				33A3FB4B243F6BEF00FBFBCB /* Demo.swift in Sources */,
+				3372BF6B2460D6C000EFB111 /* ListeningIcon.swift in Sources */,
 				33A3FB46243F6B2000FBFBCB /* DemoRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

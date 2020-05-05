@@ -30,7 +30,20 @@ struct ASRDemoDetail: View {
                         AnyTransition.opacity.animation(Animation.linear(duration: 1))
                     )
                     
-                    MicButtonView(store:store)
+                    Button(action:{
+                        if (self.store.isListening) {
+                            self.store.deactivatePipeline()
+                        } else {
+                            self.store.activatePipeline()
+                        }
+                        
+                    }) {
+                        ListeningIcon(isListening:$store.isListening)
+                            .foregroundColor(Color.white)
+                        .background(Color("SpokestackBlue"))
+                        .cornerRadius(40)
+                        .shadow(color: Color("SpokestackBlue"), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    }
                 }.offset(x: 0, y: 60)
                 
                 recordingView()
@@ -48,7 +61,7 @@ struct ASRDemoDetail: View {
     func recordingView() -> some View {
         Group {
             if (store.isListening) {
-                WaveView().frame(height: 100.0)
+                WaveView().foregroundColor(Color("SpokestackBlue")).frame(height: 100.0)
             } else {
                 Spacer().frame(height: 108.0)
             }

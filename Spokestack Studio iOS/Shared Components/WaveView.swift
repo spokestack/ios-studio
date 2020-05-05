@@ -20,8 +20,8 @@ struct WaveView: View {
     
     var body: some View {
         ZStack {
-            SineWave(phase: p1, amplitude: a1, frequency: 3).fill(Color.gray).opacity(0.2)
-            SineWave(phase: p2, amplitude: a2, frequency: 5).fill(Color("SpokestackBlue")).opacity(0.5)
+            SineWave(phase: p1, amplitude: a1, frequency: 3).opacity(0.2)//.fill(Color.gray).opacity(0.2)
+            SineWave(phase: p2, amplitude: a2, frequency: 5).opacity(0.5)//.fill(Color("SpokestackBlue")).opacity(0.5)
         }.onReceive(timer) { time in
             
             self.t+=1
@@ -74,6 +74,6 @@ struct SineWave: Shape {
 
 struct WaveView_Previews: PreviewProvider {
     static var previews: some View {
-        WaveView()
+        WaveView().foregroundColor(Color.blue)
     }
 }
