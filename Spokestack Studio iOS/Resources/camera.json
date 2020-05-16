@@ -1,0 +1,92 @@
+{
+  "domain": "camera",
+  "intents": [
+    {
+      "name": "navigate.next",
+      "slots": []
+    },
+    {
+      "name": "accept",
+      "slots": []
+    },
+    {
+      "name": "undo",
+      "slots": []
+    },
+    {
+      "name": "navigate.back",
+      "slots": []
+    },
+    {
+      "name": "request.help",
+      "slots": []
+    },
+    {
+      "name": "inform",
+      "slots": [
+        {
+          "name": "item",
+          "capture_name": "item",
+          "type": "text",
+          "facets": "{\"source\": \"values/wildcard.txt\"}"
+        }
+      ]
+    },
+    {
+      "name": "reject",
+      "slots": []
+    },
+    {
+      "name": "command.share",
+      "slots": [
+        {
+          "name": "service",
+          "capture_name": "service",
+          "type": "text",
+          "facets": "{\"source\": \"module/sharing/share_service.txt\"}"
+        },
+        {
+          "name": "service_verb",
+          "capture_name": "service",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"twitter\", \"aliases\": [\"tweet\"]}, {\"name\": \"pinterest\", \"aliases\": [\"pin\"]}, {\"name\": \"email\", \"aliases\": [\"email\", \"mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "command.capture",
+      "slots": [
+        {
+          "name": "medium",
+          "capture_name": "medium",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"photo\", \"aliases\": [\"picture\", \"pic\"]}, {\"name\": \"video\", \"aliases\": [\"movie\", \"film\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "command.timer",
+      "slots": [
+        {
+          "name": "length",
+          "capture_name": "length",
+          "type": "integer",
+          "facets": "{\"range\": [1, 30]}"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "o",
+    "b_item",
+    "b_length",
+    "b_medium",
+    "b_service",
+    "b_service_verb",
+    "i_item",
+    "i_length",
+    "i_medium",
+    "i_service",
+    "i_service_verb"
+  ]
+}

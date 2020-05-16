@@ -1,0 +1,207 @@
+{
+  "domain": "mobile-app",
+  "intents": [
+    {
+      "name": "navigate.next",
+      "description": "the user wishes to move to the next screen or step in the current process",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "accept",
+      "description": "an affirmative answer, usually to a question posed by the system.",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "command.undo",
+      "description": "the user wishes to undo the last operation",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "request.select",
+      "description": "the user is choosing a specificy item from a list of search results or any list displayed on-screen",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "number",
+          "capture_name": "number",
+          "description": "the index of the item being selected. note that natural language is typically 1-indexed.",
+          "type": "integer",
+          "facets": "{\"range\": [1, 50]}"
+        },
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "command.stop",
+      "description": "",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "navigate.back",
+      "description": "the user wishes to move back to the previous screen or step in the current process",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "request.help",
+      "description": "the user needs help with the content currently displayed or the app in general",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "inform",
+      "description": "The most general of all intents. 'inform' is a piece of information offered by the user that can't be classified in any more specific way. This could be an answer to a specific slot-filling question asked by the system or an utterance the system simply doesn't understand.",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "item",
+          "capture_name": "item",
+          "description": "the piece of information being communicated. this may be a single word or an entire phrase/sentence.",
+          "type": "text",
+          "facets": "{}"
+        },
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "reject",
+      "description": "a negative answer, usually to a question posed by the system.",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "command.navigate.feature",
+      "description": "the user wishes to be taken to a specific screen or feature within the app",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "generic_feature",
+          "capture_name": "feature",
+          "description": "the feature the user needs help with. this could be a top-level feature or an app-specific setting.",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"profile\", \"aliases\": [\"user profile\", \"user\"]}, {\"name\": \"account\", \"aliases\": [\"user account\", \"user settings\"]}, {\"name\": \"settings\", \"aliases\": [\"settings\"]}, {\"name\": \"help\", \"aliases\": []}, {\"name\": \"feed\", \"aliases\": [\"timeline\"]}, {\"name\": \"library\", \"aliases\": [\"collection\"]}, {\"name\": \"home\", \"aliases\": [\"main\"]}, {\"name\": \"support\", \"aliases\": [\"service\", \"customer service\", \"customer support\"]}]}"
+        },
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "request.help.feature",
+      "description": "the user has requested help with a specific feature and perhaps needs a walkthrough of how to perform an action.",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "generic_feature",
+          "capture_name": "feature",
+          "description": "the feature the user needs help with. this could be a top-level feature or an app-specific setting.",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"profile\", \"aliases\": [\"user profile\", \"user\"]}, {\"name\": \"account\", \"aliases\": [\"user account\", \"user settings\"]}, {\"name\": \"settings\", \"aliases\": [\"settings\"]}, {\"name\": \"feed\", \"aliases\": [\"timeline\"]}]}"
+        },
+        {
+          "name": "feature",
+          "capture_name": "feature",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+        }
+      ]
+    }
+  ],
+  "domain_slots": [
+    {
+      "name": "feature",
+      "capture_name": "feature",
+      "description": "",
+      "type": "selset",
+      "facets": "{\"selections\": [{\"name\": \"cart\", \"aliases\": [\"bag\", \"cart\", \"shopping cart\", \"basket\", \"shopping basket\"]}, {\"name\": \"chat\", \"aliases\": []}, {\"name\": \"event\", \"aliases\": [\"events\", \"upcoming\"]}, {\"name\": \"video\", \"aliases\": [\"videos\"]}, {\"name\": \"music\", \"aliases\": []}, {\"name\": \"notifications\", \"aliases\": []}, {\"name\": \"orders\", \"aliases\": []}, {\"name\": \"inbox\", \"aliases\": [\"messages\", \"new messages\", \"email\", \"new email\", \"mail\", \"new mail\"]}]}"
+    }
+  ],
+  "tags": [
+    "o",
+    "b_feature",
+    "b_generic_feature",
+    "b_item",
+    "b_number",
+    "i_feature",
+    "i_generic_feature",
+    "i_item",
+    "i_number"
+  ]
+}

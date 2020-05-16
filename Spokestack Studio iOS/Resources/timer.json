@@ -1,0 +1,183 @@
+{
+  "domain": "timer",
+  "intents": [
+    {
+      "name": "navigate.next",
+      "description": "the user wishes to move to the next screen or step in the current process",
+      "implicit_slots": {},
+      "slots": []
+    },
+    {
+      "name": "accept",
+      "description": "an affirmative answer, usually to a question posed by the system.",
+      "implicit_slots": {},
+      "slots": []
+    },
+    {
+      "name": "command.undo",
+      "description": "the user wishes to undo the last operation",
+      "implicit_slots": {},
+      "slots": []
+    },
+    {
+      "name": "request.select",
+      "description": "the user is choosing a specificy item from a list of search results or any list displayed on-screen",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "number",
+          "capture_name": "number",
+          "description": "the index of the item being selected. note that natural language is typically 1-indexed.",
+          "type": "integer",
+          "facets": "{\"range\": [1, 50]}"
+        }
+      ]
+    },
+    {
+      "name": "command.stop",
+      "description": "stop or pause the timer",
+      "implicit_slots": {},
+      "slots": []
+    },
+    {
+      "name": "navigate.back",
+      "description": "the user wishes to move back to the previous screen or step in the current process",
+      "implicit_slots": {},
+      "slots": []
+    },
+    {
+      "name": "request.help",
+      "description": "the user needs help with the content currently displayed or the app in general",
+      "implicit_slots": {},
+      "slots": []
+    },
+    {
+      "name": "inform",
+      "description": "The most general of all intents. 'inform' is a piece of information offered by the user that can't be classified in any more specific way. This could be an answer to a specific slot-filling question asked by the system or an utterance the system simply doesn't understand.",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "item",
+          "capture_name": "item",
+          "description": "the piece of information being communicated. this may be a single word or an entire phrase/sentence.",
+          "type": "text",
+          "facets": "{}"
+        }
+      ]
+    },
+    {
+      "name": "reject",
+      "description": "a negative answer, usually to a question posed by the system.",
+      "implicit_slots": {},
+      "slots": []
+    },
+    {
+      "name": "command.reset",
+      "description": "reset the timer to the last known settings",
+      "implicit_slots": {},
+      "slots": []
+    },
+    {
+      "name": "command.start",
+      "description": "start the timer with the current settings",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "direction",
+          "capture_name": "direction",
+          "description": "whether the timer should count up or down",
+          "type": "entity",
+          "facets": "{\"values\": [\"up\", \"down\"]}"
+        },
+        {
+          "name": "minutes",
+          "capture_name": "minutes",
+          "description": "the number of minutes to put on the clock",
+          "type": "integer",
+          "facets": "{\"range\": [1, 60]}"
+        }
+      ]
+    },
+    {
+      "name": "command.mark",
+      "description": "mark a lap or division in the workout",
+      "implicit_slots": {},
+      "slots": []
+    },
+    {
+      "name": "command.set",
+      "description": "change the timer's settings",
+      "implicit_slots": {},
+      "slots": [
+        {
+          "name": "direction",
+          "capture_name": "direction",
+          "description": "whether the timer should count up or down; down should be the default",
+          "type": "entity",
+          "facets": "{\"values\": [\"up\", \"down\"]}"
+        },
+        {
+          "name": "rounds",
+          "capture_name": "rounds",
+          "description": "the number of rounds in a Tabata cycle",
+          "type": "integer",
+          "facets": "{\"range\": [1, 10]}"
+        },
+        {
+          "name": "cycles",
+          "capture_name": "cycles",
+          "description": "the number of cycles in a Tabata workout",
+          "type": "integer",
+          "facets": "{\"range\": [1, 10]}"
+        },
+        {
+          "name": "work_seconds",
+          "capture_name": "work_seconds",
+          "description": "the number of seconds of work in each Tabata round",
+          "type": "integer",
+          "facets": "{\"range\": [1, 60]}"
+        },
+        {
+          "name": "rest_seconds",
+          "capture_name": "rest_seconds",
+          "description": "the number of seconds of rest in each Tabata round",
+          "type": "integer",
+          "facets": "{\"range\": [1, 60]}"
+        },
+        {
+          "name": "minutes",
+          "capture_name": "minutes",
+          "description": "the number of minutes to put on the clock",
+          "type": "integer",
+          "facets": "{\"range\": [1, 60]}"
+        }
+      ]
+    },
+    {
+      "name": "request.time",
+      "description": "the user wishes to know how much time is remaining",
+      "implicit_slots": {},
+      "slots": []
+    }
+  ],
+  "domain_slots": [],
+  "tags": [
+    "o",
+    "b_cycles",
+    "b_direction",
+    "b_item",
+    "b_minutes",
+    "b_number",
+    "b_rest_seconds",
+    "b_rounds",
+    "b_work_seconds",
+    "i_cycles",
+    "i_direction",
+    "i_item",
+    "i_minutes",
+    "i_number",
+    "i_rest_seconds",
+    "i_rounds",
+    "i_work_seconds"
+  ]
+}

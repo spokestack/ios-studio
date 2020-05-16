@@ -27,11 +27,3 @@ Pods/
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
-
-
-camera.tflite
-camera.json
-mobile.tflite
-mobile.json
-timer.tflite
-timer.json
