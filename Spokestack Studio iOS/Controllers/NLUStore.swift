@@ -12,21 +12,24 @@ import Spokestack
 class NLUStore:  ObservableObject {
 
     @Published var result: NLUResult?
+    
     @Published var benchmark: Double = 0
+    
     @Published var error: Error?
     
     private var configuration: SpeechConfiguration = SpeechConfiguration()
+    
     private var nlu: NLUTensorflow? = nil
     
     private var startTime = CFAbsoluteTimeGetCurrent()
     
-    init(result:NLUResult?) {
+    init(_ result: NLUResult?) {
         self.result = result
     }
     
-    func configureNLU(modelName:String, metadataName:String) {
+    func configureNLU(_ modelName: String, metadataName: String) {
         
-        let c = SpeechConfiguration()
+        let c: SpeechConfiguration = SpeechConfiguration()
         
         guard let modelPath = Bundle(for: type(of: self)).path(forResource: modelName, ofType: "tflite") else {
             print("could not find \(modelName).tflite in bundle")
@@ -50,22 +53,23 @@ class NLUStore:  ObservableObject {
         self.nlu = nil
     }
     
-    func classify (text: String) {
+    func classify(_ text: String) {
         
-        startTime = CFAbsoluteTimeGetCurrent()
-        error = nil
+        self.startTime = CFAbsoluteTimeGetCurrent()
+        self.error = nil
         
         print("classifying \(text)")
         
-        if (nlu == nil) {
-            nlu = try! NLUTensorflow(self, configuration: configuration)
+        if self.nlu == nil {
+            self.nlu = try! NLUTensorflow(self, configuration: self.configuration)
         }
         
-        nlu?.classify(utterance: text)
+        self.nlu?.classify(utterance: text)
     }
 }
 
 extension NLUStore: NLUDelegate {
+    
     func classification(result: NLUResult) {
         let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
         print("Classification: \(result) in \(timeElapsed)")
@@ -81,16 +85,13 @@ extension NLUStore: NLUDelegate {
         print("Trace: \(trace)")
     }
     
-    func failure(error: Error) {
+    func failure(nluError error: Error) {
         print("Failure: \(error)")
         
         DispatchQueue.main.async {
             
             self.error = error
             self.result = nil
-        }
-        
+        }   
     }
-    
-    
 }

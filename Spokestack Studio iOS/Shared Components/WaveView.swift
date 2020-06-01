@@ -7,24 +7,31 @@
 //
 
 import SwiftUI
+import Combine
 
 struct WaveView: View {
     
-    let timer = Timer.publish(every: 0.25, on: .main, in: .common).autoconnect()
-    @State private var a1:CGFloat = 25
-    @State private var a2:CGFloat = 20
-    @State private var p1:CGFloat = 0
-    @State private var p2:CGFloat = 0
+    let timer: Publishers.Autoconnect = Timer.publish(every: 0.25, on: .main, in: .common).autoconnect()
     
-    @State private var t:Int = 0
+    @State private var a1: CGFloat = 25
+    
+    @State private var a2 :CGFloat = 20
+    
+    @State private var p1: CGFloat = 0
+    
+    @State private var p2: CGFloat = 0
+    
+    @State private var t: Int = 0
     
     var body: some View {
+        
         ZStack {
+        
             SineWave(phase: p1, amplitude: a1, frequency: 3).opacity(0.2)//.fill(Color.gray).opacity(0.2)
             SineWave(phase: p2, amplitude: a2, frequency: 5).opacity(0.5)//.fill(Color("SpokestackBlue")).opacity(0.5)
         }.onReceive(timer) { time in
             
-            self.t+=1
+            self.t += 1
             let modA = CGFloat(sin(Double(self.t)/Double.pi))
             let modB = CGFloat(sin(Double(self.t)/Double.pi/2))
             
@@ -33,15 +40,17 @@ struct WaveView: View {
             
             self.p1 = modB
             self.p2 = modA
-            
         }
     }
 }
 
 struct SineWave: Shape {
+    
     let phase: CGFloat
+    
     let amplitude: CGFloat
-    let frequency: CGFloat //cycles per screen width
+    
+    let frequency: CGFloat /// cycles per screen width
     
     func path(in rect: CGRect) -> Path {
         let width = rect.width

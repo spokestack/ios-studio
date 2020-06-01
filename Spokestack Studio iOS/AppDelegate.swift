@@ -12,19 +12,25 @@ import AVFoundation
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let audioSession = AVAudioSession.sharedInstance()
+
+        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+
         do {
-            try audioSession.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default,
-                                         options: [AVAudioSession.CategoryOptions.defaultToSpeaker, AVAudioSession.CategoryOptions.allowBluetooth, AVAudioSession.CategoryOptions.allowAirPlay])
+            try audioSession.setCategory(AVAudioSession.Category.playAndRecord,
+                                         mode: AVAudioSession.Mode.default,
+                                         options: [
+                                            .defaultToSpeaker,
+                                            .allowBluetooth,
+                                            .allowAirPlay
+                                         ]
+            )
+            
             try audioSession.setActive(true)
-        } catch let error as NSError {
+        } catch  {
             // handle error
         }
-        
-        // Override point for customization after application launch.
+
         return true
     }
 
@@ -41,7 +47,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 

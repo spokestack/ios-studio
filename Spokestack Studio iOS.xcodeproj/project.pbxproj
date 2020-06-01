@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0115A0F624743E2E00229164 /* ThreeDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115A0F524743E2E00229164 /* ThreeDotsView.swift */; };
 		3310B776244A15740015C812 /* HintArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310B775244A15740015C812 /* HintArrowView.swift */; };
 		3332887624461933006C3BDE /* NLUStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887524461933006C3BDE /* NLUStore.swift */; };
 		3332887924462EAE006C3BDE /* NLUDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887824462EAE006C3BDE /* NLUDemoDetail.swift */; };
@@ -62,20 +63,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0115A0F524743E2E00229164 /* ThreeDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDotsView.swift; sourceTree = "<group>"; };
 		1B4E6F80FD9BA61D40C7D88F /* Pods-Spokestack Studio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spokestack Studio iOS.release.xcconfig"; path = "Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3310B775244A15740015C812 /* HintArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintArrowView.swift; sourceTree = "<group>"; };
 		3332887524461933006C3BDE /* NLUStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUStore.swift; sourceTree = "<group>"; };
 		3332887824462EAE006C3BDE /* NLUDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUDemoDetail.swift; sourceTree = "<group>"; };
-		3332887A24465ADC006C3BDE /* camera.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = camera.tflite; sourceTree = "<group>"; };
+		3332887A24465ADC006C3BDE /* camera.tflite */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera.tflite; sourceTree = "<group>"; };
 		3332887B24465ADC006C3BDE /* camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camera.json; sourceTree = "<group>"; };
 		3332887C24465ADC006C3BDE /* vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vocab.txt; sourceTree = "<group>"; };
 		3352E926244F6F6800890B7E /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		33578B7024533C9100714B6A /* WakewordDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakewordDemoDetail.swift; sourceTree = "<group>"; };
 		3359D6E2245731E000AA591D /* modelData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modelData.json; sourceTree = "<group>"; };
 		3359D6E42457501200AA591D /* mobile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile.json; sourceTree = "<group>"; };
-		3359D6E52457501300AA591D /* mobile.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobile.tflite; sourceTree = "<group>"; };
+		3359D6E52457501300AA591D /* mobile.tflite */ = {isa = PBXFileReference; lastKnownFileType = text; path = mobile.tflite; sourceTree = "<group>"; };
 		3359D6E8245750F000AA591D /* timer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timer.json; sourceTree = "<group>"; };
-		3359D6E9245750F000AA591D /* timer.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = timer.tflite; sourceTree = "<group>"; };
+		3359D6E9245750F000AA591D /* timer.tflite */ = {isa = PBXFileReference; lastKnownFileType = text; path = timer.tflite; sourceTree = "<group>"; };
 		3359D6EC245751BB00AA591D /* NLUModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUModel.swift; sourceTree = "<group>"; };
 		3372BF6A2460D6C000EFB111 /* ListeningIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningIcon.swift; sourceTree = "<group>"; };
 		33744540244E5A6D0049A50C /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
@@ -133,6 +135,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01FD5C742472FFF600788B78 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3332887524461933006C3BDE /* NLUStore.swift */,
+				33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */,
+				33AACCCF2444EFD700DF3700 /* SpeechStore.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		01FD5C752473124000788B78 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB18243F67AB00FBFBCB /* Assets.xcassets */,
+				33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		01FD5C762473125000788B78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33A3FB20243F67AB00FBFBCB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3332887724462CB0006C3BDE /* NLU */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +185,7 @@
 				33A3FB56243FC49300FBFBCB /* WaveView.swift */,
 				3310B775244A15740015C812 /* HintArrowView.swift */,
 				3372BF6A2460D6C000EFB111 /* ListeningIcon.swift */,
+				0115A0F524743E2E00229164 /* ThreeDotsView.swift */,
 			);
 			path = "Shared Components";
 			sourceTree = "<group>";
@@ -193,24 +223,21 @@
 		33A3FB11243F67A900FBFBCB /* Spokestack Studio iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3372BF692460D66F00EFB111 /* Shared Components */,
-				3374453F244E55430049A50C /* Permissions */,
-				33A3FB44243F6AE700FBFBCB /* Home */,
-				33A3FB4F243F81BC00FBFBCB /* ASR */,
-				33AACCC82444BB3D00DF3700 /* TTS */,
-				3332887724462CB0006C3BDE /* NLU */,
-				33578B6F24533C4500714B6A /* Wakeword */,
-				33A3FB4C243F6C9400FBFBCB /* Resources */,
-				33A3FB47243F6B7A00FBFBCB /* Models */,
 				33A3FB12243F67A900FBFBCB /* AppDelegate.swift */,
 				33A3FB14243F67A900FBFBCB /* SceneDelegate.swift */,
-				33A3FB18243F67AB00FBFBCB /* Assets.xcassets */,
-				33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */,
-				33A3FB20243F67AB00FBFBCB /* Info.plist */,
+				33A3FB4F243F81BC00FBFBCB /* ASR */,
+				01FD5C742472FFF600788B78 /* Controllers */,
+				33A3FB44243F6AE700FBFBCB /* Home */,
+				33A3FB47243F6B7A00FBFBCB /* Models */,
+				3332887724462CB0006C3BDE /* NLU */,
+				3374453F244E55430049A50C /* Permissions */,
 				33A3FB1A243F67AB00FBFBCB /* Preview Content */,
-				33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */,
-				33AACCCF2444EFD700DF3700 /* SpeechStore.swift */,
-				3332887524461933006C3BDE /* NLUStore.swift */,
+				33A3FB4C243F6C9400FBFBCB /* Resources */,
+				3372BF692460D66F00EFB111 /* Shared Components */,
+				01FD5C762473125000788B78 /* Supporting Files */,
+				33AACCC82444BB3D00DF3700 /* TTS */,
+				01FD5C752473124000788B78 /* UI */,
+				33578B6F24533C4500714B6A /* Wakeword */,
 			);
 			path = "Spokestack Studio iOS";
 			sourceTree = "<group>";
@@ -487,6 +514,7 @@
 				3352E927244F6F6800890B7E /* LaunchView.swift in Sources */,
 				33AACCCC2444CB1700DF3700 /* TTSDemoDetail.swift in Sources */,
 				3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */,
+				0115A0F624743E2E00229164 /* ThreeDotsView.swift in Sources */,
 				33A3FB43243F6ADD00FBFBCB /* DemoList.swift in Sources */,
 				33A3FB51243F822100FBFBCB /* ASRDemoDetail.swift in Sources */,
 				3332887624461933006C3BDE /* NLUStore.swift in Sources */,
@@ -664,7 +692,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020053101;
 				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = Z7TPYC529T;
+				DEVELOPMENT_TEAM = XM4VAKDQL9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Spokestack Studio iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -688,7 +716,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020053101;
 				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = Z7TPYC529T;
+				DEVELOPMENT_TEAM = XM4VAKDQL9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Spokestack Studio iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

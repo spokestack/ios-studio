@@ -10,16 +10,17 @@ import SwiftUI
 
 struct DemoRow: View {
     
-    var demo:Demo
+    var demo: Demo
     
     var body: some View {
         
         VStack(alignment: .leading) {
-            Text(demo.name)
+            Text(self.demo.name)
                 .font(.headline)
-            Text(demo.description)
+            Text(self.demo.description)
                 .font(.subheadline)
-        }.padding(.vertical)
+        }
+        .padding(.vertical)
     }
 }
 

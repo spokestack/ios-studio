@@ -9,11 +9,18 @@
 import Foundation
 
 struct NLUModel: Hashable, Codable, Identifiable {
+    
     var id: Int
+    
     var name: String
+    
     var description: String
+    
     var revision: String
-    var examples: [String]
+    
+    var examples: Array<String>
+    
     var modelFile: String
+    
     var metadataFile: String
 }

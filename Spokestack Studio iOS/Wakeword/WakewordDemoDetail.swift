@@ -9,49 +9,62 @@
 import SwiftUI
 
 struct WakewordDemoDetail: View {
-    @ObservedObject var store:PipelineStore
+    
+    @ObservedObject var store: PipelineStore
         
     var body: some View {
+        
         ZStack {
+        
             Color("SpokestackBackground")
+            
             VStack {
                 Spacer()
-                Text(store.text).foregroundColor(Color("SpokestackPrimary"))
+                Text(self.store.text)
+                    .foregroundColor(Color("SpokestackPrimary"))
                 Spacer()
+                
                 Group {
-                    if (!store.isListening) {
-                        Text("Say \"Spoke Stack\" to get my attention.").foregroundColor(Color("SpokestackPrimary")).font(.headline)
+                    if !self.store.isListening {
+                        
+                        Text("Say \"Spoke Stack\" to get my attention.")
+                            .foregroundColor(Color("SpokestackPrimary"))
+                            .font(.headline)
+                        
                     } else {
-                        Text("Go ahead, I'm listening.").foregroundColor(Color("SpokestackPrimary")).font(.headline)
+                        
+                        Text("Go ahead, I'm listening.")
+                            .foregroundColor(Color("SpokestackPrimary"))
+                            .font(.headline)
                     }
-                }.transition(
+                }
+                .transition(
                     AnyTransition.opacity.animation(Animation.linear(duration: 0.5))
                 )
                 
                 Spacer()
                 
                 Group {
-                if (store.isListening) {
-                    WaveView().frame(height: 100.0)
-                } else {
-                    Spacer().frame(height: 108.0)
-                }
+    
+                    if self.store.isListening {
+                        WaveView().frame(height: 100.0)
+                    } else {
+                        Spacer().frame(height: 108.0)
+                    }
                 }.transition(
                     AnyTransition.opacity.animation(Animation.linear(duration: 1))
                 )
-                
             }
         }
         .navigationBarTitle("Wake Word")
         .onAppear {
-            self.store.configure(mode: .wakeword)
+            self.store.configure(.wakeword)
         }
     }
-
 }
 
 struct WakewordDemoDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WakewordDemoDetail(store:PipelineStore(text:""))
+        WakewordDemoDetail(store: PipelineStore(""))
     }
 }

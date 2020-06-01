@@ -10,28 +10,30 @@ import SwiftUI
 import Spokestack
 
 class SpeechStore:  ObservableObject {
+    
     @Published var isSpeaking: Bool
+    
     @Published var isSynthesizing: Bool
 
-    init() {
-        self.isSpeaking = false;
-        self.isSynthesizing = false;
-    }
-    
     lazy private var tts: TextToSpeech = {
         return TextToSpeech(self, configuration: SpeechConfiguration())
     }()
     
-    func speak(_ text: String) {
-        let input = TextToSpeechInput(text)
-        isSynthesizing = true
-        tts.speak(input)
+    init() {
+        self.isSpeaking = false
+        self.isSynthesizing = false
     }
     
+    func speak(_ text: String) {
+        
+        let input = TextToSpeechInput(text)
+        self.isSynthesizing = true
+        self.tts.speak(input)
+    }
 }
 
-
 extension SpeechStore: TextToSpeechDelegate {
+    
     func didTrace(_ trace: String) {
          print("did trace \(trace)")
     }
@@ -40,7 +42,7 @@ extension SpeechStore: TextToSpeechDelegate {
         print("tts success")
     }
     
-    func failure(error: Error) {
+    func failure(ttsError error: Error) {
         print("tts failed \(error)")
         DispatchQueue.main.async {
             self.isSpeaking = false
@@ -62,6 +64,4 @@ extension SpeechStore: TextToSpeechDelegate {
             self.isSpeaking = false
         }
     }
-    
-    
 }

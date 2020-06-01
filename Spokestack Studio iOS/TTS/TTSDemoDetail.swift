@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct TTSDemoDetail: View {
-    @ObservedObject var asrStore:PipelineStore
-    @ObservedObject var ttsStore:SpeechStore
+    
+    @ObservedObject var asrStore: PipelineStore
+    
+    @ObservedObject var ttsStore: SpeechStore
     
     enum UIState {
         case intro
@@ -20,108 +22,162 @@ struct TTSDemoDetail: View {
         case speaking
     }
     
-    @State var uiState:UIState = .intro
+    @State var uiState: UIState = .intro
     
     var body: some View {
+        
         ZStack {
             Color("SpokestackBackground")
             VStack {
                 
                 Spacer()
                 
-                if (uiState == .intro) {
+                if self.uiState == .intro {
                     VStack {
-                        Text("Speech transfer will take the words you speak and repeat them back with a synthesized voice.").font(.body).multilineTextAlignment(.center).padding()
-                        Text("What you hear is the free Spokestack voice. Spokestack can also build a custom synthesized voice for you from audio recordings.").font(.body).multilineTextAlignment(.center).padding()
+                        Text("Speech transfer will take the words you speak and repeat them back with a synthesized voice.")
+                            .font(.body)
+                            .multilineTextAlignment(.center)
+                            .padding()
+                        Text("What you hear is the free Spokestack voice. Spokestack can also build a custom synthesized voice for you from audio recordings.")
+                            .font(.body)
+                            .multilineTextAlignment(.center)
+                            .padding()
                         
-                    }.background(/*@START_MENU_TOKEN@*/Color("SpokestackForeground")/*@END_MENU_TOKEN@*/).cornerRadius(10).padding()
+                    }
+                    .background(Color("SpokestackForeground"))
+                    .cornerRadius(10)
+                    .padding()
                     
                     Spacer()
                     
-                    Button(action:{withAnimation {self.uiState = .ready}}){
-                        Text("Continue").foregroundColor(Color.white).padding().padding(.horizontal, 20.0)
-                    }.background(Color("SpokestackBlue")).cornerRadius(20).shadow(color: Color("SpokestackBlue"), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    Button(action:{
+                        
+                        withAnimation {
+                            self.uiState = .ready
+                        }
+                    }){
+                        Text("Continue")
+                            .foregroundColor(Color.white)
+                            .padding()
+                            .padding(.horizontal, 20.0)
+                    }
+                    .background(Color("SpokestackBlue"))
+                    .cornerRadius(20)
+                    .shadow(color: Color("SpokestackBlue"), radius: 10)
                     
                     Spacer()
                 }
                 
-                if (uiState == .synthesizing || uiState == .speaking) {
-                    Text(asrStore.text).font(.title).foregroundColor(Color("SpokestackPrimary")).padding()
-                    if (uiState == .synthesizing) {
-                        Text("Synthesizing...").fontWeight(.light).foregroundColor(Color("SpokestackPrimary")).padding()
+                if (self.uiState == .synthesizing || self.uiState == .speaking) {
+                    
+                    Text(self.asrStore.text)
+                        .font(.title)
+                        .foregroundColor(Color("SpokestackPrimary"))
+                        .padding()
+                    
+                    if self.uiState == .synthesizing {
+                    
+                        Text("Synthesizing...")
+                            .fontWeight(.light)
+                            .foregroundColor(Color("SpokestackPrimary"))
+                            .padding()
                     }
                     Spacer()
                 }
                 
                 Group {
-                    if (uiState == .ready) {
+                    
+                    if self.uiState == .ready {
+                    
                         Group {
+                        
                             Text("Tap the button below & speak")
-                            HintArrowView(arrowheadSize:6).frame(width: 200, height: 150).foregroundColor(Color.primary)
-                        }.transition(.opacity)
+                            HintArrowView(arrowheadSize: 6)
+                                .frame(width: 200, height: 150)
+                                .foregroundColor(Color.primary)
+                        }
+                        .transition(.opacity)
                     }
                     
-                    if (uiState == .ready || uiState == .listening) {
+                    if self.uiState == .ready || self.uiState == .listening {
                         
                         Button(action:{
-                            if (self.asrStore.isListening) {
+                            
+                            if self.asrStore.isListening {
                                 self.asrStore.deactivatePipeline()
                             } else {
                                 self.asrStore.activatePipeline()
                             }
                             
                         }) {
-                            ListeningIcon(isListening:$asrStore.isListening)
+                            ListeningIcon(isListening: self.$asrStore.isListening)
                                 .foregroundColor(Color.white)
-                            .background(Color("SpokestackBlue"))
-                            .cornerRadius(40)
-                            .shadow(color: Color("SpokestackBlue"), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                        }.transition(.opacity)
+                                .background(Color("SpokestackBlue"))
+                                .cornerRadius(40)
+                                .shadow(color: Color("SpokestackBlue"), radius: 10)
+                        }
+                        .transition(.opacity)
                     }
-                }.offset(x: 0, y: 60)
-                
-                if (uiState == .listening || uiState == .synthesizing || uiState == .speaking) {
-                    WaveView().foregroundColor(Color("SpokestackBlue")).frame(height: 100.0).transition(.opacity)
-                } else if (uiState == .ready) {
-                    Spacer().frame(height: 108.0).transition(.opacity)
                 }
+                .offset(x: 0, y: 60)
                 
+                if (self.uiState == .listening || self.uiState == .synthesizing || self.uiState == .speaking) {
+                    
+                    WaveView()
+                        .foregroundColor(Color("SpokestackBlue"))
+                        .frame(height: 100.0)
+                        .transition(.opacity)
+
+                } else if self.uiState == .ready {
+                    
+                    Spacer()
+                        .frame(height: 108.0)
+                        .transition(.opacity)
+                }
+
+            }.onReceive(self.asrStore.$text, perform: { text in
                 
-            }.onReceive(asrStore.$text, perform: { text in
                 print("onreceive \(text) \(self.uiState)")
-                if (text.count > 0 && self.uiState == .listening) {
-                    withAnimation{self.uiState = .synthesizing}
+                
+                if (!text.isEmpty && self.uiState == .listening) {
+                
+                    withAnimation{
+                        self.uiState = .synthesizing
+                    }
                     self.ttsStore.speak(text)
                 }
-            }).onReceive(asrStore.$isListening, perform: { isListening in
+
+            }).onReceive(self.asrStore.$isListening, perform: { isListening in
+                
                 print("onreceive pipeline \(isListening) \(self.uiState)")
-                if (isListening) {
+                
+                if isListening {
                     withAnimation{self.uiState = .listening}
                 }
-                
             })
-                .onReceive(ttsStore.$isSpeaking, perform: { isSpeaking in
-                    print("onreceive speaking \(isSpeaking) \(self.uiState)")
-                    withAnimation{
-                        if (isSpeaking == false && self.uiState == .speaking) {
-                            self.uiState = .ready
-                        } else if (isSpeaking == true) {
-                            self.uiState = .speaking
-                        }
-                        
+            .onReceive(self.ttsStore.$isSpeaking, perform: { isSpeaking in
+                
+                print("onreceive speaking \(isSpeaking) \(self.uiState)")
+                
+                withAnimation{
+                
+                    if (isSpeaking == false && self.uiState == .speaking) {
+                        self.uiState = .ready
+                    } else if isSpeaking == true {
+                        self.uiState = .speaking
                     }
-                })
+                }
+            })
         }
         .navigationBarTitle("Voice Transfer")
         .onAppear {
-            self.asrStore.configure(mode: .push2talk)
+            self.asrStore.configure(.push2talk)
         }
     }
-    
 }
 
 struct TTSDemoDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TTSDemoDetail(asrStore: PipelineStore(text:""), ttsStore: SpeechStore())
+        TTSDemoDetail(asrStore: PipelineStore(""), ttsStore: SpeechStore())
     }
 }

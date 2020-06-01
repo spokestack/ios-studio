@@ -38,9 +38,7 @@ struct HintArrowView: View {
             return path
         }
     }
-    
 }
-
 
 struct HintArrowView_Previews: PreviewProvider {
     static var previews: some View {

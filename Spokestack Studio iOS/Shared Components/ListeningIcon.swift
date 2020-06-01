@@ -7,82 +7,43 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ListeningIcon: View {
     
     @Binding var isListening: Bool
-    var size:CGFloat = 58
+    
+    var size: CGFloat = 58
     
     var body: some View {
         
-        return HStack {
-            if (isListening) {
-                ThreeDotsView(compression: 3).frame(width: size-8, height: size-8)
-            } else {
-                Image(systemName: "mic").font(.title)
-            }
-        }.frame(width: size, height: size)
-
-    }
-    
-    struct ThreeDotsView: View {
-        
-        static let minScale:CGFloat = 0.5
-        
-        @State private var scale0: CGFloat = minScale
-        @State private var scale1: CGFloat = minScale
-        @State private var scale2: CGFloat = minScale
-        
-        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-        @State private var state = 0
-        
-        let compression: CGFloat
-        
-        var body: some View {
+        ZStack {
             
-            let circle1 = Circle().scaleEffect(scale0).animation(Animation.spring())
-            let circle2 = Circle().scaleEffect(scale1).animation(Animation.spring())
-            let circle3 = Circle().scaleEffect(scale2).animation(Animation.spring())
+            ThreeDotsView(isListening: $isListening, compression: 3)
+                .frame(width: size-8, height: size-8)
+                .opacity(isListening ? 1.0 : 0.0)
             
-            return HStack(spacing: -compression) {
-                circle1
-                circle2
-                circle3
-                }.onReceive(timer) { time in
-                    if self.state == 2 {
-                        
-                        self.scale1 = ThreeDotsView.minScale
-                        self.scale2 = 1
-                        
-                        self.state = 0
-                    } else if self.state == 1 {
-                        
-                        self.scale0 = ThreeDotsView.minScale
-                        self.scale1 = 1
-                        
-                        self.state = 2
-                    } else {
-                        
-                        self.scale2 = ThreeDotsView.minScale
-                        self.scale0 = 1
-                        
-                        self.state = 1
-                    }
-            }
-            
-       }
+            Image(systemName: "mic").font(.title)
+                .opacity(isListening ? 0.0 : 1.0)
+        }
+        .frame(width: size, height: size)
     }
 }
 
 struct ListeningIcon_Previews: PreviewProvider {
+    
     static var previews: some View {
         PreviewWrapper()
     }
     
     struct PreviewWrapper: View {
+    
         @State var isRecording: Bool = false
+        
         @State var isRecording2: Bool = true
+        
         var body: some View {
+        
             Group {
                 HStack {
                     Button(action:{self.isRecording.toggle()}) {
@@ -115,5 +76,4 @@ struct ListeningIcon_Previews: PreviewProvider {
             }
         }
     }
-    
 }
