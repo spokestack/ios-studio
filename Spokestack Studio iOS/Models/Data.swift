@@ -8,7 +8,7 @@
 
 import Foundation
 
-let demoData: Array<Demo> = load("demoData.json")
+let tutorialData: Array<Tutorial> = load("tutorialData.json")
 let modelData: Array<NLUModel> = load("modelData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {

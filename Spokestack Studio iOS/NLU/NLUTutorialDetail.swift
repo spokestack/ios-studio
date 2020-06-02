@@ -1,5 +1,5 @@
 //
-//  NLUDemoView.swift
+//  NLUTutorialView.swift
 //  Spokestack Studio iOS
 //
 //  Created by Daniel Tyreus on 4/14/20.
@@ -9,7 +9,7 @@
 import SwiftUI
 import Spokestack
 
-struct NLUDemoDetail: View {
+struct NLUTutorialDetail: View {
     
     @ObservedObject var asrStore: PipelineStore
     
@@ -267,16 +267,16 @@ struct NLUDemoDetail: View {
     }
 }
 
-struct NLUDemoDetail_Previews: PreviewProvider {
+struct NLUTutorialDetail_Previews: PreviewProvider {
 
     static var previews: some View {
 
         Group {
-            NLUDemoDetail(asrStore: PipelineStore(""),
+            NLUTutorialDetail(asrStore: PipelineStore(""),
                           nluStore: NLUStore(NLUResult(utterance: "test utterance", intent: "test.utterance", confidence: 0.99)))
                 .environment(\.colorScheme, .light)
             
-            NLUDemoDetail(asrStore: PipelineStore(""),
+            NLUTutorialDetail(asrStore: PipelineStore(""),
                           nluStore: NLUStore(NLUResult(utterance: "test utterance", intent: "test.utterance", confidence: 0.99)))
                 .environment(\.colorScheme, .dark)
         }

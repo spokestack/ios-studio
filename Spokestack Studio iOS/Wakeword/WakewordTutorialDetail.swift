@@ -1,5 +1,5 @@
 //
-//  WakewordDemoDetail.swift
+//  WakewordTutorialDetail.swift
 //  Spokestack Studio iOS
 //
 //  Created by Daniel Tyreus on 4/24/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct WakewordDemoDetail: View {
+struct WakewordTutorialDetail: View {
     
     @ObservedObject var store: PipelineStore
         
@@ -63,8 +63,8 @@ struct WakewordDemoDetail: View {
     }
 }
 
-struct WakewordDemoDetail_Previews: PreviewProvider {
+struct WakewordTutorialDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WakewordDemoDetail(store: PipelineStore(""))
+        WakewordTutorialDetail(store: PipelineStore(""))
     }
 }

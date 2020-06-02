@@ -15,7 +15,7 @@ struct LaunchView: View {
     var body: some View {
         
         if self.permissionsComplete {
-            return AnyView(DemoList())
+            return AnyView(TutorialList())
         } else {
             return AnyView(Permissions(permissionsComplete: self.$permissionsComplete))
         }

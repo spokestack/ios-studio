@@ -10,12 +10,12 @@
 		0115A0F624743E2E00229164 /* ThreeDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115A0F524743E2E00229164 /* ThreeDotsView.swift */; };
 		3310B776244A15740015C812 /* HintArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310B775244A15740015C812 /* HintArrowView.swift */; };
 		3332887624461933006C3BDE /* NLUStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887524461933006C3BDE /* NLUStore.swift */; };
-		3332887924462EAE006C3BDE /* NLUDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887824462EAE006C3BDE /* NLUDemoDetail.swift */; };
+		3332887924462EAE006C3BDE /* NLUTutorialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887824462EAE006C3BDE /* NLUTutorialDetail.swift */; };
 		3332887D24465ADC006C3BDE /* camera.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3332887A24465ADC006C3BDE /* camera.tflite */; };
 		3332887E24465ADC006C3BDE /* camera.json in Resources */ = {isa = PBXBuildFile; fileRef = 3332887B24465ADC006C3BDE /* camera.json */; };
 		3332887F24465ADC006C3BDE /* vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3332887C24465ADC006C3BDE /* vocab.txt */; };
 		3352E927244F6F6800890B7E /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3352E926244F6F6800890B7E /* LaunchView.swift */; };
-		33578B7124533C9100714B6A /* WakewordDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B7024533C9100714B6A /* WakewordDemoDetail.swift */; };
+		33578B7124533C9100714B6A /* WakewordTutorialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B7024533C9100714B6A /* WakewordTutorialDetail.swift */; };
 		3359D6E3245731E000AA591D /* modelData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E2245731E000AA591D /* modelData.json */; };
 		3359D6E62457501300AA591D /* mobile.json in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E42457501200AA591D /* mobile.json */; };
 		3359D6E72457501300AA591D /* mobile.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3359D6E52457501300AA591D /* mobile.tflite */; };
@@ -32,14 +32,14 @@
 		33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB1D243F67AB00FBFBCB /* LaunchScreen.storyboard */; };
 		33A3FB2A243F67AB00FBFBCB /* Spokestack_Studio_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB29243F67AB00FBFBCB /* Spokestack_Studio_iOSTests.swift */; };
 		33A3FB35243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB34243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift */; };
-		33A3FB43243F6ADD00FBFBCB /* DemoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB42243F6ADD00FBFBCB /* DemoList.swift */; };
-		33A3FB46243F6B2000FBFBCB /* DemoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB45243F6B2000FBFBCB /* DemoRow.swift */; };
+		33A3FB43243F6ADD00FBFBCB /* TutorialList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB42243F6ADD00FBFBCB /* TutorialList.swift */; };
+		33A3FB46243F6B2000FBFBCB /* TutorialRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB45243F6B2000FBFBCB /* TutorialRow.swift */; };
 		33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB48243F6B9800FBFBCB /* Data.swift */; };
-		33A3FB4B243F6BEF00FBFBCB /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB4A243F6BEF00FBFBCB /* Demo.swift */; };
-		33A3FB4E243F6CC200FBFBCB /* demoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB4D243F6CC200FBFBCB /* demoData.json */; };
-		33A3FB51243F822100FBFBCB /* ASRDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */; };
+		33A3FB4B243F6BEF00FBFBCB /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB4A243F6BEF00FBFBCB /* Tutorial.swift */; };
+		33A3FB4E243F6CC200FBFBCB /* tutorialData.json in Resources */ = {isa = PBXBuildFile; fileRef = 33A3FB4D243F6CC200FBFBCB /* tutorialData.json */; };
+		33A3FB51243F822100FBFBCB /* ASRTutorialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB50243F822100FBFBCB /* ASRTutorialDetail.swift */; };
 		33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FB56243FC49300FBFBCB /* WaveView.swift */; };
-		33AACCCC2444CB1700DF3700 /* TTSDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AACCCB2444CB1700DF3700 /* TTSDemoDetail.swift */; };
+		33AACCCC2444CB1700DF3700 /* TTSTutorialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AACCCB2444CB1700DF3700 /* TTSTutorialDetail.swift */; };
 		33AACCCE2444CC1A00DF3700 /* PipelineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */; };
 		33AACCD02444EFD700DF3700 /* SpeechStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AACCCF2444EFD700DF3700 /* SpeechStore.swift */; };
 		7BD642C6A595E7A6101B90CB /* Pods_Spokestack_Studio_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FB2D58825BF78AC8D26AD3 /* Pods_Spokestack_Studio_iOS.framework */; };
@@ -67,12 +67,12 @@
 		1B4E6F80FD9BA61D40C7D88F /* Pods-Spokestack Studio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spokestack Studio iOS.release.xcconfig"; path = "Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3310B775244A15740015C812 /* HintArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintArrowView.swift; sourceTree = "<group>"; };
 		3332887524461933006C3BDE /* NLUStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUStore.swift; sourceTree = "<group>"; };
-		3332887824462EAE006C3BDE /* NLUDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUDemoDetail.swift; sourceTree = "<group>"; };
+		3332887824462EAE006C3BDE /* NLUTutorialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUTutorialDetail.swift; sourceTree = "<group>"; };
 		3332887A24465ADC006C3BDE /* camera.tflite */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera.tflite; sourceTree = "<group>"; };
 		3332887B24465ADC006C3BDE /* camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camera.json; sourceTree = "<group>"; };
 		3332887C24465ADC006C3BDE /* vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vocab.txt; sourceTree = "<group>"; };
 		3352E926244F6F6800890B7E /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
-		33578B7024533C9100714B6A /* WakewordDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakewordDemoDetail.swift; sourceTree = "<group>"; };
+		33578B7024533C9100714B6A /* WakewordTutorialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakewordTutorialDetail.swift; sourceTree = "<group>"; };
 		3359D6E2245731E000AA591D /* modelData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modelData.json; sourceTree = "<group>"; };
 		3359D6E42457501200AA591D /* mobile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile.json; sourceTree = "<group>"; };
 		3359D6E52457501300AA591D /* mobile.tflite */ = {isa = PBXFileReference; lastKnownFileType = text; path = mobile.tflite; sourceTree = "<group>"; };
@@ -95,14 +95,14 @@
 		33A3FB30243F67AB00FBFBCB /* Spokestack Studio iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spokestack Studio iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A3FB34243F67AB00FBFBCB /* Spokestack_Studio_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spokestack_Studio_iOSUITests.swift; sourceTree = "<group>"; };
 		33A3FB36243F67AB00FBFBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33A3FB42243F6ADD00FBFBCB /* DemoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoList.swift; sourceTree = "<group>"; };
-		33A3FB45243F6B2000FBFBCB /* DemoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoRow.swift; sourceTree = "<group>"; };
+		33A3FB42243F6ADD00FBFBCB /* TutorialList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialList.swift; sourceTree = "<group>"; };
+		33A3FB45243F6B2000FBFBCB /* TutorialRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialRow.swift; sourceTree = "<group>"; };
 		33A3FB48243F6B9800FBFBCB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		33A3FB4A243F6BEF00FBFBCB /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
-		33A3FB4D243F6CC200FBFBCB /* demoData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demoData.json; sourceTree = "<group>"; };
-		33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASRDemoDetail.swift; sourceTree = "<group>"; };
+		33A3FB4A243F6BEF00FBFBCB /* Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		33A3FB4D243F6CC200FBFBCB /* tutorialData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tutorialData.json; sourceTree = "<group>"; };
+		33A3FB50243F822100FBFBCB /* ASRTutorialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASRTutorialDetail.swift; sourceTree = "<group>"; };
 		33A3FB56243FC49300FBFBCB /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
-		33AACCCB2444CB1700DF3700 /* TTSDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSDemoDetail.swift; sourceTree = "<group>"; };
+		33AACCCB2444CB1700DF3700 /* TTSTutorialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSTutorialDetail.swift; sourceTree = "<group>"; };
 		33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineStore.swift; sourceTree = "<group>"; };
 		33AACCCF2444EFD700DF3700 /* SpeechStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechStore.swift; sourceTree = "<group>"; };
 		42FB2D58825BF78AC8D26AD3 /* Pods_Spokestack_Studio_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spokestack_Studio_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +165,7 @@
 		3332887724462CB0006C3BDE /* NLU */ = {
 			isa = PBXGroup;
 			children = (
-				3332887824462EAE006C3BDE /* NLUDemoDetail.swift */,
+				3332887824462EAE006C3BDE /* NLUTutorialDetail.swift */,
 				3398470224478D9C000C4242 /* ClassifyingView.swift */,
 			);
 			path = NLU;
@@ -174,7 +174,7 @@
 		33578B6F24533C4500714B6A /* Wakeword */ = {
 			isa = PBXGroup;
 			children = (
-				33578B7024533C9100714B6A /* WakewordDemoDetail.swift */,
+				33578B7024533C9100714B6A /* WakewordTutorialDetail.swift */,
 			);
 			path = Wakeword;
 			sourceTree = "<group>";
@@ -271,8 +271,8 @@
 		33A3FB44243F6AE700FBFBCB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				33A3FB42243F6ADD00FBFBCB /* DemoList.swift */,
-				33A3FB45243F6B2000FBFBCB /* DemoRow.swift */,
+				33A3FB42243F6ADD00FBFBCB /* TutorialList.swift */,
+				33A3FB45243F6B2000FBFBCB /* TutorialRow.swift */,
 				3352E926244F6F6800890B7E /* LaunchView.swift */,
 			);
 			path = Home;
@@ -282,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				33A3FB48243F6B9800FBFBCB /* Data.swift */,
-				33A3FB4A243F6BEF00FBFBCB /* Demo.swift */,
+				33A3FB4A243F6BEF00FBFBCB /* Tutorial.swift */,
 				3359D6EC245751BB00AA591D /* NLUModel.swift */,
 			);
 			path = Models;
@@ -298,7 +298,7 @@
 				3332887B24465ADC006C3BDE /* camera.json */,
 				3332887A24465ADC006C3BDE /* camera.tflite */,
 				3332887C24465ADC006C3BDE /* vocab.txt */,
-				33A3FB4D243F6CC200FBFBCB /* demoData.json */,
+				33A3FB4D243F6CC200FBFBCB /* tutorialData.json */,
 				3359D6E2245731E000AA591D /* modelData.json */,
 			);
 			path = Resources;
@@ -307,7 +307,7 @@
 		33A3FB4F243F81BC00FBFBCB /* ASR */ = {
 			isa = PBXGroup;
 			children = (
-				33A3FB50243F822100FBFBCB /* ASRDemoDetail.swift */,
+				33A3FB50243F822100FBFBCB /* ASRTutorialDetail.swift */,
 			);
 			path = ASR;
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 		33AACCC82444BB3D00DF3700 /* TTS */ = {
 			isa = PBXGroup;
 			children = (
-				33AACCCB2444CB1700DF3700 /* TTSDemoDetail.swift */,
+				33AACCCB2444CB1700DF3700 /* TTSTutorialDetail.swift */,
 			);
 			path = TTS;
 			sourceTree = "<group>";
@@ -443,7 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3359D6E62457501300AA591D /* mobile.json in Resources */,
-				33A3FB4E243F6CC200FBFBCB /* demoData.json in Resources */,
+				33A3FB4E243F6CC200FBFBCB /* tutorialData.json in Resources */,
 				3359D6E3245731E000AA591D /* modelData.json in Resources */,
 				3332887D24465ADC006C3BDE /* camera.tflite in Resources */,
 				33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */,
@@ -506,24 +506,24 @@
 				33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */,
 				33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */,
 				33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */,
-				33578B7124533C9100714B6A /* WakewordDemoDetail.swift in Sources */,
+				33578B7124533C9100714B6A /* WakewordTutorialDetail.swift in Sources */,
 				3359D6ED245751BB00AA591D /* NLUModel.swift in Sources */,
 				33744541244E5A6D0049A50C /* Permissions.swift in Sources */,
 				3310B776244A15740015C812 /* HintArrowView.swift in Sources */,
 				33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */,
 				3352E927244F6F6800890B7E /* LaunchView.swift in Sources */,
-				33AACCCC2444CB1700DF3700 /* TTSDemoDetail.swift in Sources */,
+				33AACCCC2444CB1700DF3700 /* TTSTutorialDetail.swift in Sources */,
 				3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */,
 				0115A0F624743E2E00229164 /* ThreeDotsView.swift in Sources */,
-				33A3FB43243F6ADD00FBFBCB /* DemoList.swift in Sources */,
-				33A3FB51243F822100FBFBCB /* ASRDemoDetail.swift in Sources */,
+				33A3FB43243F6ADD00FBFBCB /* TutorialList.swift in Sources */,
+				33A3FB51243F822100FBFBCB /* ASRTutorialDetail.swift in Sources */,
 				3332887624461933006C3BDE /* NLUStore.swift in Sources */,
 				33AACCCE2444CC1A00DF3700 /* PipelineStore.swift in Sources */,
-				3332887924462EAE006C3BDE /* NLUDemoDetail.swift in Sources */,
+				3332887924462EAE006C3BDE /* NLUTutorialDetail.swift in Sources */,
 				33AACCD02444EFD700DF3700 /* SpeechStore.swift in Sources */,
-				33A3FB4B243F6BEF00FBFBCB /* Demo.swift in Sources */,
+				33A3FB4B243F6BEF00FBFBCB /* Tutorial.swift in Sources */,
 				3372BF6B2460D6C000EFB111 /* ListeningIcon.swift in Sources */,
-				33A3FB46243F6B2000FBFBCB /* DemoRow.swift in Sources */,
+				33A3FB46243F6B2000FBFBCB /* TutorialRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  TTSDemoDetail.swift
+//  TTSTutorialDetail.swift
 //  Spokestack Studio iOS
 //
 //  Created by Daniel Tyreus on 4/13/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct TTSDemoDetail: View {
+struct TTSTutorialDetail: View {
     
     @ObservedObject var asrStore: PipelineStore
     
@@ -176,8 +176,8 @@ struct TTSDemoDetail: View {
     }
 }
 
-struct TTSDemoDetail_Previews: PreviewProvider {
+struct TTSTutorialDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TTSDemoDetail(asrStore: PipelineStore(""), ttsStore: SpeechStore())
+        TTSTutorialDetail(asrStore: PipelineStore(""), ttsStore: SpeechStore())
     }
 }
