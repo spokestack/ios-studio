@@ -72,7 +72,7 @@ struct MinecraftTutorialDetail: View {
    }
 }
 
-struct MinecraftDemoDetail_Previews: PreviewProvider {
+struct MinecraftTutorialDetail_Previews: PreviewProvider {
     static var previews: some View {
 
         MinecraftTutorialDetail(dialogStore: DialogStore())

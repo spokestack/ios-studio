@@ -1,5 +1,5 @@
 //
-//  NLUDemoView.swift
+//  NLUTutorialView.swift
 //  Spokestack Studio iOS
 //
 //  Created by Daniel Tyreus on 4/14/20.
@@ -267,7 +267,7 @@ struct NLUTutorialDetail: View {
     }
 }
 
-struct NLUDemoDetail_Previews: PreviewProvider {
+struct NLUTutorialDetail_Previews: PreviewProvider {
 
     static var previews: some View {
 

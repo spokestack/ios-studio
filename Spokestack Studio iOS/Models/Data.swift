@@ -8,7 +8,7 @@
 
 import Foundation
 
-let demoData: Array<Tutorial> = load("tutorialData.json")
+let tutorialData: Array<Tutorial> = load("tutorialData.json")
 let modelData: Array<NLUModel> = load("modelData.json")
 let recipes: Dictionary<String, String> = load("minecraft-recipe.json")
 
