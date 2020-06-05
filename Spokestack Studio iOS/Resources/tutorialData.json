@@ -2,22 +2,22 @@
 [
 {
     "name": "Speech Recognition",
-    "description": "Push to talk and let the app convert what you say to text.",
+    "description": "Learn how apps can transcribe your speech into text.",
     "id": 1001,
 },
 {
     "name": "Voice Transfer",
-    "description": "Speak to the app and hear your words repeated in a different voice.",
+    "description": "Discover how an app can hear your words and speak back in a different voice.",
     "id": 1002,
 },
 {
     "name": "Intent Understanding",
-    "description": "Load a natural language understanding model to process what you say.",
+    "description": "Experiment with natural language understanding using on-device models.",
     "id": 1003,
 },
 {
     "name": "Wake Word",
-    "description": "Speak a custom word to wake up your app.",
+    "description": "See how a spoken word can wake up an app.",
     "id": 1004,
 }
 ]

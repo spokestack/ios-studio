@@ -93,7 +93,7 @@ struct NLUTutorialDetail: View {
         
             Spacer()
             VStack {
-                Text("Natural language understanding (NLU) converts text into a an \"intent\" that your app can understand. The types of intents that your app will understand depends on the type of NLU model loaded.")
+                Text("Natural language understanding (NLU) converts text into a an \"intent\" that your app can understand. Each NLU model is trained to recognize different types of intents. This tutorial lets you load a few different models and experiment with how they understand what you say.")
                     .font(.body)
                     .multilineTextAlignment(.center)
                     .padding()
@@ -131,7 +131,7 @@ struct NLUTutorialDetail: View {
                 
                 Section {
                     
-                    Text("Spokestack provides on-device NLU models for many use cases. ")
+                    Text("Choose an on-device NLU model to load.")
                         .font(.body)
                         .fontWeight(.light)
                         .foregroundColor(Color("SpokestackPrimary"))

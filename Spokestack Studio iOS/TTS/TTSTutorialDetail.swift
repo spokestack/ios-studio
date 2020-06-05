@@ -34,11 +34,11 @@ struct TTSTutorialDetail: View {
                 
                 if self.uiState == .intro {
                     VStack {
-                        Text("Speech transfer will take the words you speak and repeat them back with a synthesized voice.")
+                        Text("Speech transfer will take the words you speak and repeat them back with a synthesized voice. This combines two important parts of natural language processing, speech recognition and text-to-speech.")
                             .font(.body)
                             .multilineTextAlignment(.center)
                             .padding()
-                        Text("What you hear is the free Spokestack voice. Spokestack can also build a custom synthesized voice for you from audio recordings.")
+                        Text("To experiment with speech transfer, speak a sentence and wait for the app to repeat it back to you.")
                             .font(.body)
                             .multilineTextAlignment(.center)
                             .padding()
