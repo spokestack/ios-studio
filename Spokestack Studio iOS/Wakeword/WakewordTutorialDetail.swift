@@ -21,6 +21,8 @@ struct WakewordTutorialDetail: View {
             VStack {
                 Spacer()
                 Text(self.store.text)
+                    .font(.title)
+                    .padding()
                     .foregroundColor(Color("SpokestackPrimary"))
                 Spacer()
                 
@@ -47,9 +49,12 @@ struct WakewordTutorialDetail: View {
                 Group {
     
                     if self.store.isListening {
-                        WaveView().frame(height: 100.0)
+                        WaveView()
+                            .foregroundColor(Color.blue)
+                            .frame(height: 100.0)
                     } else {
-                        Spacer().frame(height: 108.0)
+                        Spacer()
+                            .frame(height: 108.0)
                     }
                 }.transition(
                     AnyTransition.opacity.animation(Animation.linear(duration: 1))

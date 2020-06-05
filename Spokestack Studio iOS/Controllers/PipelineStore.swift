@@ -23,7 +23,19 @@ class PipelineStore: ObservableObject {
     private var mode: PipelineMode = .push2talk
     
     lazy private var pipeline: SpeechPipeline = {
-        return SpeechPipeline(self, pipelineDelegate: self)
+        
+        var config = SpeechConfiguration()
+        config.wakewords = "smokestack,spoke stack,spokestack"
+        //config.tracing = .DEBUG
+
+        return SpeechPipeline(
+            SpeechProcessors.appleSpeech.processor,
+            speechConfiguration: config,
+            speechDelegate: self,
+            wakewordService: SpeechProcessors.appleWakeword.processor,
+            pipelineDelegate: self
+        )
+        
     }()
     
     init(_ text: String) {

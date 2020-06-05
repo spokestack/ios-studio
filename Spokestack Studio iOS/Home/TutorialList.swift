@@ -23,12 +23,14 @@ struct TutorialList: View {
         
         let ttsStore: SpeechStore = SpeechStore()
         let nluStore: NLUStore = NLUStore(nil)
+        let dialogStore: DialogStore = DialogStore()
         
         let tutorials: Array<TutorialView> = [
             TutorialView(tutorial: tutorialData[0], destination: AnyView(ASRTutorialDetail(store: asrStore))),
             TutorialView(tutorial: tutorialData[1], destination: AnyView(TTSTutorialDetail(asrStore: asrStore, ttsStore: ttsStore))),
             TutorialView(tutorial: tutorialData[2], destination: AnyView(NLUTutorialDetail(asrStore: asrStore, nluStore: nluStore))),
-            TutorialView(tutorial: tutorialData[3], destination: AnyView(WakewordTutorialDetail(store: asrStore)))
+            TutorialView(tutorial: tutorialData[3], destination: AnyView(WakewordTutorialDetail(store: asrStore))),
+            TutorialView(tutorial: tutorialData[4], destination: AnyView(MinecraftTutorialDetail(dialogStore: dialogStore)))
         ]
         
         return NavigationView {
@@ -38,7 +40,7 @@ struct TutorialList: View {
                     TutorialRow(tutorial: tutorial.tutorial)
                 }
             }
-            .navigationBarTitle(Text("Voice Studio"))
+            .navigationBarTitle(Text("NLU Studio"))
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
