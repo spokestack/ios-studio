@@ -66,7 +66,7 @@ struct RecipeHandler: RequestHandler {
     
     func handle(_ handlerInput: HandlerInput) -> HandlerOutput {
 
-        let item: Slot? = handlerInput.intent!.slots?["item"]
+        let item: Slot? = handlerInput.intent!.slots?["Item"]
         
         print("got item \(String(describing: item))")
         let repromptSpeech: String = responses["RECIPE_NOT_FOUND_REPROMPT"]!

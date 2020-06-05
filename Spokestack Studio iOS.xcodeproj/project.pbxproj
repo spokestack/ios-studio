@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		0115A0F624743E2E00229164 /* ThreeDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115A0F524743E2E00229164 /* ThreeDotsView.swift */; };
 		01170ADD24868E5000386C48 /* minecraft-recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 01170ADB24868E5000386C48 /* minecraft-recipe.json */; };
-		01170ADE24868E5000386C48 /* minecraft-metadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 01170ADC24868E5000386C48 /* minecraft-metadata.json */; };
 		01170AE02486956E00386C48 /* DialogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01170ADF2486956E00386C48 /* DialogStore.swift */; };
-		01170AE22486AC6000386C48 /* 8436a7e.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 01170AE12486AC6000386C48 /* 8436a7e.tflite */; };
 		01170AE42486AC8000386C48 /* MinecraftTutorialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01170AE32486AC8000386C48 /* MinecraftTutorialDetail.swift */; };
 		01170AE62486B4EB00386C48 /* SkillDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01170AE52486B4EB00386C48 /* SkillDialogController.swift */; };
 		3310B776244A15740015C812 /* HintArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310B775244A15740015C812 /* HintArrowView.swift */; };
+		3329CD3B248B05A1005C4EF7 /* minecraft-model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3329CD39248B05A1005C4EF7 /* minecraft-model.tflite */; };
+		3329CD3D248B05ED005C4EF7 /* minecraft-metadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 3329CD3C248B05ED005C4EF7 /* minecraft-metadata.json */; };
 		3332887624461933006C3BDE /* NLUStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887524461933006C3BDE /* NLUStore.swift */; };
 		3332887924462EAE006C3BDE /* NLUTutorialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887824462EAE006C3BDE /* NLUTutorialDetail.swift */; };
 		3332887D24465ADC006C3BDE /* camera.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3332887A24465ADC006C3BDE /* camera.tflite */; };
@@ -71,13 +71,13 @@
 /* Begin PBXFileReference section */
 		0115A0F524743E2E00229164 /* ThreeDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDotsView.swift; sourceTree = "<group>"; };
 		01170ADB24868E5000386C48 /* minecraft-recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "minecraft-recipe.json"; sourceTree = "<group>"; };
-		01170ADC24868E5000386C48 /* minecraft-metadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "minecraft-metadata.json"; sourceTree = "<group>"; };
 		01170ADF2486956E00386C48 /* DialogStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogStore.swift; sourceTree = "<group>"; };
-		01170AE12486AC6000386C48 /* 8436a7e.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8436a7e.tflite; sourceTree = "<group>"; };
 		01170AE32486AC8000386C48 /* MinecraftTutorialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinecraftTutorialDetail.swift; sourceTree = "<group>"; };
 		01170AE52486B4EB00386C48 /* SkillDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDialogController.swift; sourceTree = "<group>"; };
 		1B4E6F80FD9BA61D40C7D88F /* Pods-Spokestack Studio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spokestack Studio iOS.release.xcconfig"; path = "Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3310B775244A15740015C812 /* HintArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintArrowView.swift; sourceTree = "<group>"; };
+		3329CD39248B05A1005C4EF7 /* minecraft-model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minecraft-model.tflite"; sourceTree = "<group>"; };
+		3329CD3C248B05ED005C4EF7 /* minecraft-metadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "minecraft-metadata.json"; sourceTree = "<group>"; };
 		3332887524461933006C3BDE /* NLUStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUStore.swift; sourceTree = "<group>"; };
 		3332887824462EAE006C3BDE /* NLUTutorialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUTutorialDetail.swift; sourceTree = "<group>"; };
 		3332887A24465ADC006C3BDE /* camera.tflite */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera.tflite; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 		01170ADA24868E2B00386C48 /* Minecraft */ = {
 			isa = PBXGroup;
 			children = (
-				01170AE12486AC6000386C48 /* 8436a7e.tflite */,
-				01170ADC24868E5000386C48 /* minecraft-metadata.json */,
+				3329CD3C248B05ED005C4EF7 /* minecraft-metadata.json */,
+				3329CD39248B05A1005C4EF7 /* minecraft-model.tflite */,
 				01170ADB24868E5000386C48 /* minecraft-recipe.json */,
 			);
 			path = Minecraft;
@@ -479,17 +479,17 @@
 			files = (
 				3359D6E62457501300AA591D /* mobile.json in Resources */,
 				33A3FB4E243F6CC200FBFBCB /* tutorialData.json in Resources */,
-				01170ADE24868E5000386C48 /* minecraft-metadata.json in Resources */,
+				3329CD3B248B05A1005C4EF7 /* minecraft-model.tflite in Resources */,
 				3359D6E3245731E000AA591D /* modelData.json in Resources */,
 				01170ADD24868E5000386C48 /* minecraft-recipe.json in Resources */,
 				3332887D24465ADC006C3BDE /* camera.tflite in Resources */,
 				33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */,
+				3329CD3D248B05ED005C4EF7 /* minecraft-metadata.json in Resources */,
 				3359D6EA245750F000AA591D /* timer.json in Resources */,
 				33A3FB1C243F67AB00FBFBCB /* Preview Assets.xcassets in Resources */,
 				3332887E24465ADC006C3BDE /* camera.json in Resources */,
 				3359D6E72457501300AA591D /* mobile.tflite in Resources */,
 				3332887F24465ADC006C3BDE /* vocab.txt in Resources */,
-				01170AE22486AC6000386C48 /* 8436a7e.tflite in Resources */,
 				33A3FB19243F67AB00FBFBCB /* Assets.xcassets in Resources */,
 				3359D6EB245750F000AA591D /* timer.tflite in Resources */,
 			);
@@ -748,7 +748,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020060201;
+				CURRENT_PROJECT_VERSION = 2020060501;
 				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = Z7TPYC529T;
 				ENABLE_PREVIEWS = YES;
@@ -758,7 +758,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.spokestack.Spokestack-Studio-iOS";
 				PRODUCT_NAME = "Spokestack Studio";
 				SWIFT_VERSION = 5.0;
@@ -772,7 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020060201;
+				CURRENT_PROJECT_VERSION = 2020060501;
 				DEVELOPMENT_ASSET_PATHS = "\"Spokestack Studio iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = Z7TPYC529T;
 				ENABLE_PREVIEWS = YES;
@@ -782,7 +782,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.spokestack.Spokestack-Studio-iOS";
 				PRODUCT_NAME = "Spokestack Studio";
 				SWIFT_VERSION = 5.0;

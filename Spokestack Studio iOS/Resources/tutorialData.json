@@ -1,6 +1,11 @@
 
 [
 {
+    "name": "Wake Word",
+    "description": "See how a spoken word can wake up an app.",
+    "id": 1004,
+},
+{
     "name": "Speech Recognition",
     "description": "Learn how apps can transcribe your speech into text.",
     "id": 1001,
@@ -16,13 +21,8 @@
     "id": 1003,
 },
 {
-    "name": "Wake Word",
-    "description": "See how a spoken word can wake up an app.",
-    "id": 1004,
-},
-{
-    "name": "MineCraft",
-    "description": "Create an Alexa type skill",
+    "name": "Voice App",
+    "description": "Try a smart-speaker style voice app",
     "id": 1005,
 }
 ]
