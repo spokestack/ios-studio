@@ -8,8 +8,23 @@
 
 import Foundation
 
-let tutorialData: Array<Tutorial> = load("tutorialData.json")
+let demoData: Array<Tutorial> = load("tutorialData.json")
 let modelData: Array<NLUModel> = load("modelData.json")
+let recipes: Dictionary<String, String> = load("minecraft-recipe.json")
+
+let responses: Dictionary<String, String> = [
+    "SKILL_NAME": "Minecraft Helper",
+    "WELCOME_MESSAGE": "Welcome to %@. You can ask a question like, what\'s the recipe for a %@? ... Now, what can I help you with?",
+    "WELCOME_REPROMPT": "For instructions on what you can say, please say help me.",
+    "DISPLAY_CARD_TITLE": "%@  - Recipe for %@.",
+    "HELP_MESSAGE": "You can ask questions such as, what\'s the recipe for a %@, or, you can say exit...Now, what can I help you with?",
+    "HELP_REPROMPT": "You can say things like, what\'s the recipe for a %@, or you can say exit...Now, what can I help you with?",
+    "STOP_MESSAGE": "Goodbye!",
+    "RECIPE_REPEAT_MESSAGE": "Try saying repeat.",
+    "RECIPE_NOT_FOUND_WITH_ITEM_NAME": "I\'m sorry, I currently do not know the recipe for %@. ",
+    "RECIPE_NOT_FOUND_WITHOUT_ITEM_NAME": "I\'m sorry, I currently do not know that recipe. ",
+    "RECIPE_NOT_FOUND_REPROMPT": "What else can I help with?",
+]
 
 func load<T: Decodable>(_ filename: String) -> T {
     

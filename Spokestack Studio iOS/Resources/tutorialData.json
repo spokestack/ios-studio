@@ -19,5 +19,10 @@
     "name": "Wake Word",
     "description": "See how a spoken word can wake up an app.",
     "id": 1004,
+},
+{
+    "name": "MineCraft",
+    "description": "Create an Alexa type skill",
+    "id": 1005,
 }
 ]

@@ -8,8 +8,11 @@
 
 import SwiftUI
 import Spokestack
+import Combine
 
-class NLUStore:  ObservableObject {
+typealias NLUStoreClassifyCallback = (_ results: Result<NLUResult, Error>) -> Void
+
+class NLUStore: ObservableObject {
 
     @Published var result: NLUResult?
     
@@ -22,6 +25,8 @@ class NLUStore:  ObservableObject {
     private var nlu: NLUTensorflow? = nil
     
     private var startTime = CFAbsoluteTimeGetCurrent()
+    
+    private var cancellable: Set<AnyCancellable> = []
     
     init(_ result: NLUResult?) {
         self.result = result
@@ -65,6 +70,30 @@ class NLUStore:  ObservableObject {
         }
         
         self.nlu?.classify(utterance: text)
+    }
+    
+    func classify(_ text: Array<String>,callback: @escaping NLUStoreClassifyCallback) {
+        
+        self.startTime = CFAbsoluteTimeGetCurrent()
+        self.error = nil
+        
+        print("classifying \(text)")
+        
+        if self.nlu == nil {
+            self.nlu = try! NLUTensorflow(self, configuration: self.configuration)
+        }
+        
+        self.nlu?
+            .classify(utterances: text)
+            .subscribe(on: DispatchQueue.global(qos: .userInitiated))
+            .sink(receiveValue: {results in
+                print("results \(results)")
+                callback(results)
+            })
+            .store(in: &self.cancellable)
+        
+        /// Have call back that returns the raw results then let the `DialogStore` handle
+        /// the mapping
     }
 }
 

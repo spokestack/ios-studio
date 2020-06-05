@@ -1,5 +1,5 @@
 //
-//  ASRTutorialDetail.swift
+//  ASRDemoDetail.swift
 //  Spokestack Studio iOS
 //
 //  Created by Daniel Tyreus on 4/9/20.
@@ -11,7 +11,7 @@ import Spokestack
 
 struct ASRTutorialDetail: View {
     
-    @ObservedObject var store:PipelineStore
+    @ObservedObject var store: PipelineStore
     
     var body: some View {
         
@@ -87,7 +87,7 @@ struct ASRTutorialDetail: View {
     }
 }
 
-struct ASRTutorialDetail_Previews: PreviewProvider {
+struct ASRDemoDetail_Previews: PreviewProvider {
     static var previews: some View {
         ASRTutorialDetail(store: PipelineStore(""))
     }

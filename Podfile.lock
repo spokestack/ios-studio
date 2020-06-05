@@ -1,6 +1,7 @@
 PODS:
   - filter_audio (0.4.3)
-  - Spokestack-iOS (10.0.0):
+  - Fuse (1.4.0)
+  - Spokestack-iOS (10.1.0):
     - filter_audio (~> 0.4.3)
     - TensorFlowLiteSwift (~> 1.14.0)
   - TensorFlowLiteC (1.14.0)
@@ -8,21 +9,24 @@ PODS:
     - TensorFlowLiteC (= 1.14.0)
 
 DEPENDENCIES:
+  - Fuse
   - Spokestack-iOS
 
 SPEC REPOS:
   trunk:
     - filter_audio
+    - Fuse
     - Spokestack-iOS
     - TensorFlowLiteC
     - TensorFlowLiteSwift
 
 SPEC CHECKSUMS:
   filter_audio: 93822826dcc07a70f41a5a4b103cae97c9efde83
-  Spokestack-iOS: afd6632dfe092de0a7af425feb8ad02bba056c17
+  Fuse: 48eaf66d0c407c7f8b0ddb168888dc4637e87f14
+  Spokestack-iOS: fc7a8ab29b9d9e79aae95109418356a9c5dc7214
   TensorFlowLiteC: a6702011fb661928634e59565b5fe262f69692d0
   TensorFlowLiteSwift: ac8c816ae2d65f631a96151e7991c46412aec7eb
 
-PODFILE CHECKSUM: 33948c89fbe3c33948ae5b6a77ebb6b9b7d2d179
+PODFILE CHECKSUM: 7f8b8c3eb5b796e6f3045d23e88581f9bd151ce2
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

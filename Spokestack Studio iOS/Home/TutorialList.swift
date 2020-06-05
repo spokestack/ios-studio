@@ -1,5 +1,5 @@
 //
-//  TutorialList.swift
+//  DemoList.swift
 //  Spokestack Studio iOS
 //
 //  Created by Daniel Tyreus on 4/9/20.
@@ -23,22 +23,24 @@ struct TutorialList: View {
         
         let ttsStore: SpeechStore = SpeechStore()
         let nluStore: NLUStore = NLUStore(nil)
+        let dialogStore: DialogStore = DialogStore()
         
-        let tutorials: Array<TutorialView> = [
-            TutorialView(tutorial: tutorialData[0], destination: AnyView(ASRTutorialDetail(store: asrStore))),
-            TutorialView(tutorial: tutorialData[1], destination: AnyView(TTSTutorialDetail(asrStore: asrStore, ttsStore: ttsStore))),
-            TutorialView(tutorial: tutorialData[2], destination: AnyView(NLUTutorialDetail(asrStore: asrStore, nluStore: nluStore))),
-            TutorialView(tutorial: tutorialData[3], destination: AnyView(WakewordTutorialDetail(store: asrStore)))
+        let demos: Array<TutorialView> = [
+            TutorialView(demo: demoData[0], destination: AnyView(ASRTutorialDetail(store: asrStore))),
+            TutorialView(demo: demoData[1], destination: AnyView(TTSTutorialDetail(asrStore: asrStore, ttsStore: ttsStore))),
+            TutorialView(demo: demoData[2], destination: AnyView(NLUTutorialDetail(asrStore: asrStore, nluStore: nluStore))),
+            TutorialView(demo: demoData[3], destination: AnyView(WakewordTutorialDetail(store: asrStore))),
+            TutorialView(demo: demoData[4], destination: AnyView(MinecraftTutorialDetail(dialogStore: dialogStore)))
         ]
         
         return NavigationView {
 
-            List(tutorials) { tutorial in
-                NavigationLink(destination: tutorial.destination) {
-                    TutorialRow(tutorial: tutorial.tutorial)
+            List(demos) { demo in
+                NavigationLink(destination: demo.destination) {
+                    TutorialRow(demo: demo.demo)
                 }
             }
-            .navigationBarTitle(Text("Voice Studio"))
+            .navigationBarTitle(Text("Spokestack Demos"))
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -48,18 +50,18 @@ struct TutorialView: Identifiable {
 
     let id: Int
     
-    let tutorial: Tutorial
+    let demo: Tutorial
     
     let destination: AnyView
 
-    init(tutorial: Tutorial, destination: AnyView) {
-        self.id = tutorial.id
-        self.tutorial = tutorial
+    init(demo: Tutorial, destination: AnyView) {
+        self.id = demo.id
+        self.demo = demo
         self.destination = destination
     }
 }
 
-struct TutorialList_Previews: PreviewProvider {
+struct DemoList_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
             TutorialList()

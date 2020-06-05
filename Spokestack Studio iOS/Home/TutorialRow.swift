@@ -1,5 +1,5 @@
 //
-//  TutorialRow.swift
+//  DemoRow.swift
 //  Spokestack Studio iOS
 //
 //  Created by Daniel Tyreus on 4/9/20.
@@ -10,25 +10,25 @@ import SwiftUI
 
 struct TutorialRow: View {
     
-    var tutorial: Tutorial
+    var demo: Tutorial
     
     var body: some View {
         
         VStack(alignment: .leading) {
-            Text(self.tutorial.name)
+            Text(self.demo.name)
                 .font(.headline)
-            Text(self.tutorial.description)
+            Text(self.demo.description)
                 .font(.subheadline)
         }
         .padding(.vertical)
     }
 }
 
-struct TutorialRow_Previews: PreviewProvider {
+struct DemoRow_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            TutorialRow(tutorial: tutorialData[0])
-            TutorialRow(tutorial: tutorialData[1])
+            TutorialRow(demo: demoData[0])
+            TutorialRow(demo: demoData[1])
         }
         .previewLayout(.fixed(width: 300, height: 400))
     }

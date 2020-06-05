@@ -3,11 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0115A0F624743E2E00229164 /* ThreeDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115A0F524743E2E00229164 /* ThreeDotsView.swift */; };
+		01170ADD24868E5000386C48 /* minecraft-recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 01170ADB24868E5000386C48 /* minecraft-recipe.json */; };
+		01170ADE24868E5000386C48 /* minecraft-metadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 01170ADC24868E5000386C48 /* minecraft-metadata.json */; };
+		01170AE02486956E00386C48 /* DialogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01170ADF2486956E00386C48 /* DialogStore.swift */; };
+		01170AE22486AC6000386C48 /* 8436a7e.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 01170AE12486AC6000386C48 /* 8436a7e.tflite */; };
+		01170AE42486AC8000386C48 /* MinecraftTutorialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01170AE32486AC8000386C48 /* MinecraftTutorialDetail.swift */; };
+		01170AE62486B4EB00386C48 /* SkillDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01170AE52486B4EB00386C48 /* SkillDialogController.swift */; };
 		3310B776244A15740015C812 /* HintArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310B775244A15740015C812 /* HintArrowView.swift */; };
 		3332887624461933006C3BDE /* NLUStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887524461933006C3BDE /* NLUStore.swift */; };
 		3332887924462EAE006C3BDE /* NLUTutorialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332887824462EAE006C3BDE /* NLUTutorialDetail.swift */; };
@@ -64,6 +70,12 @@
 
 /* Begin PBXFileReference section */
 		0115A0F524743E2E00229164 /* ThreeDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDotsView.swift; sourceTree = "<group>"; };
+		01170ADB24868E5000386C48 /* minecraft-recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "minecraft-recipe.json"; sourceTree = "<group>"; };
+		01170ADC24868E5000386C48 /* minecraft-metadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "minecraft-metadata.json"; sourceTree = "<group>"; };
+		01170ADF2486956E00386C48 /* DialogStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogStore.swift; sourceTree = "<group>"; };
+		01170AE12486AC6000386C48 /* 8436a7e.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8436a7e.tflite; sourceTree = "<group>"; };
+		01170AE32486AC8000386C48 /* MinecraftTutorialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinecraftTutorialDetail.swift; sourceTree = "<group>"; };
+		01170AE52486B4EB00386C48 /* SkillDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDialogController.swift; sourceTree = "<group>"; };
 		1B4E6F80FD9BA61D40C7D88F /* Pods-Spokestack Studio iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spokestack Studio iOS.release.xcconfig"; path = "Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3310B775244A15740015C812 /* HintArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintArrowView.swift; sourceTree = "<group>"; };
 		3332887524461933006C3BDE /* NLUStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLUStore.swift; sourceTree = "<group>"; };
@@ -135,11 +147,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01170AD924868D4F00386C48 /* Minecraft */ = {
+			isa = PBXGroup;
+			children = (
+				01170AE32486AC8000386C48 /* MinecraftTutorialDetail.swift */,
+			);
+			path = Minecraft;
+			sourceTree = "<group>";
+		};
+		01170ADA24868E2B00386C48 /* Minecraft */ = {
+			isa = PBXGroup;
+			children = (
+				01170AE12486AC6000386C48 /* 8436a7e.tflite */,
+				01170ADC24868E5000386C48 /* minecraft-metadata.json */,
+				01170ADB24868E5000386C48 /* minecraft-recipe.json */,
+			);
+			path = Minecraft;
+			sourceTree = "<group>";
+		};
 		01FD5C742472FFF600788B78 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				01170ADF2486956E00386C48 /* DialogStore.swift */,
 				3332887524461933006C3BDE /* NLUStore.swift */,
 				33AACCCD2444CC1A00DF3700 /* PipelineStore.swift */,
+				01170AE52486B4EB00386C48 /* SkillDialogController.swift */,
 				33AACCCF2444EFD700DF3700 /* SpeechStore.swift */,
 			);
 			path = Controllers;
@@ -228,6 +260,7 @@
 				33A3FB4F243F81BC00FBFBCB /* ASR */,
 				01FD5C742472FFF600788B78 /* Controllers */,
 				33A3FB44243F6AE700FBFBCB /* Home */,
+				01170AD924868D4F00386C48 /* Minecraft */,
 				33A3FB47243F6B7A00FBFBCB /* Models */,
 				3332887724462CB0006C3BDE /* NLU */,
 				3374453F244E55430049A50C /* Permissions */,
@@ -291,6 +324,7 @@
 		33A3FB4C243F6C9400FBFBCB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01170ADA24868E2B00386C48 /* Minecraft */,
 				3359D6E8245750F000AA591D /* timer.json */,
 				3359D6E9245750F000AA591D /* timer.tflite */,
 				3359D6E42457501200AA591D /* mobile.json */,
@@ -348,6 +382,7 @@
 				33A3FB0B243F67A900FBFBCB /* Sources */,
 				33A3FB0C243F67A900FBFBCB /* Frameworks */,
 				33A3FB0D243F67A900FBFBCB /* Resources */,
+				8BEBF0E32B08518FB6709905 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -444,7 +479,9 @@
 			files = (
 				3359D6E62457501300AA591D /* mobile.json in Resources */,
 				33A3FB4E243F6CC200FBFBCB /* tutorialData.json in Resources */,
+				01170ADE24868E5000386C48 /* minecraft-metadata.json in Resources */,
 				3359D6E3245731E000AA591D /* modelData.json in Resources */,
+				01170ADD24868E5000386C48 /* minecraft-recipe.json in Resources */,
 				3332887D24465ADC006C3BDE /* camera.tflite in Resources */,
 				33A3FB1F243F67AB00FBFBCB /* LaunchScreen.storyboard in Resources */,
 				3359D6EA245750F000AA591D /* timer.json in Resources */,
@@ -452,6 +489,7 @@
 				3332887E24465ADC006C3BDE /* camera.json in Resources */,
 				3359D6E72457501300AA591D /* mobile.tflite in Resources */,
 				3332887F24465ADC006C3BDE /* vocab.txt in Resources */,
+				01170AE22486AC6000386C48 /* 8436a7e.tflite in Resources */,
 				33A3FB19243F67AB00FBFBCB /* Assets.xcassets in Resources */,
 				3359D6EB245750F000AA591D /* timer.tflite in Resources */,
 			);
@@ -474,6 +512,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8BEBF0E32B08518FB6709905 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spokestack Studio iOS/Pods-Spokestack Studio iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F13A391ED4CF111F3D00B7A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -505,17 +560,20 @@
 			files = (
 				33A3FB57243FC49300FBFBCB /* WaveView.swift in Sources */,
 				33A3FB13243F67A900FBFBCB /* AppDelegate.swift in Sources */,
+				01170AE42486AC8000386C48 /* MinecraftTutorialDetail.swift in Sources */,
 				33A3FB49243F6B9800FBFBCB /* Data.swift in Sources */,
 				33578B7124533C9100714B6A /* WakewordTutorialDetail.swift in Sources */,
 				3359D6ED245751BB00AA591D /* NLUModel.swift in Sources */,
 				33744541244E5A6D0049A50C /* Permissions.swift in Sources */,
 				3310B776244A15740015C812 /* HintArrowView.swift in Sources */,
 				33A3FB15243F67A900FBFBCB /* SceneDelegate.swift in Sources */,
+				01170AE62486B4EB00386C48 /* SkillDialogController.swift in Sources */,
 				3352E927244F6F6800890B7E /* LaunchView.swift in Sources */,
 				33AACCCC2444CB1700DF3700 /* TTSTutorialDetail.swift in Sources */,
 				3398470324478D9C000C4242 /* ClassifyingView.swift in Sources */,
 				0115A0F624743E2E00229164 /* ThreeDotsView.swift in Sources */,
 				33A3FB43243F6ADD00FBFBCB /* TutorialList.swift in Sources */,
+				01170AE02486956E00386C48 /* DialogStore.swift in Sources */,
 				33A3FB51243F822100FBFBCB /* ASRTutorialDetail.swift in Sources */,
 				3332887624461933006C3BDE /* NLUStore.swift in Sources */,
 				33AACCCE2444CC1A00DF3700 /* PipelineStore.swift in Sources */,
